@@ -1,1 +1,9 @@
+3/9: 
+Skapade en grupp med fyra gruppmedlemmar. Vi satt oss ner och läste igenom hela uppgiften och började 
+diskutera och bolla idéer om hur vi vill göra uppgiften samt vilka tekniker vi vill använda oss av. 
+Vi stötte på många nya tekniker som vi inte arbetat med tidigare som vi kommer titta närmare på de kommande veckorna.
+
+4/9:
+Hade ett möte med gruppen där vi gick igenom frågor och diskuterade verktygen i mer detalj så att alla har en förståelse vad de används till. 
+Vi installerade alla verkygen som behövdes.
 
