@@ -7,3 +7,10 @@ Vi stötte på många nya tekniker som vi inte arbetat med tidigare som vi komme
 Hade ett möte med gruppen där vi gick igenom frågor och diskuterade verktygen i mer detalj så att alla har en förståelse vad de används till. 
 Vi installerade alla verkygen som behövdes.
 
+5/9:
+Satt oss ner och började gå igenom proccessen att arbeta med git i en och samma repo med flera användare samtidigt. 
+Vi började med att använda Git cli genom terminalen och sedan avlustade vi med testa runt funktioner inne på Githubs hemsida.
+Git clienten var en utmaning då det finns så många olika kommandon att komma ihåg och de blev inte alltid som man hade tänkt sig när man använder dem.
+Githubs hemsida är betydligt enklare då den erbjuder en fin UI som gör det lätt att hitta. 
+Jag komer personligen arbeta mer mot Git cli genom terminalen för att lära mig arbetssättet bättre.
+
