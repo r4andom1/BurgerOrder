@@ -27,6 +27,7 @@ pickled red onion
 pickle
 salad
 tomato
+mozzarella
 
 
 
@@ -40,3 +41,4 @@ mustard
 Fourguys special formula-sauce
 jalapeño mayonnaise
 mayonnaise
+cheese sauce
