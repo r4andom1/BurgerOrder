@@ -13,8 +13,7 @@ Coca Cola: 33cl, 50cl, 70cl
 Fanta: 33cl, 50cl, 70cl
 Sprite: 33cl, 50cl, 70cl
 Fanta exotic: 33cl, 50cl, 70cl
-
-
+Cola Zero: 33cl, 50cl, 70cl
 
 Hot drink:
 Tea: small, medium, large
@@ -22,3 +21,4 @@ Coffee: small, medium, large
 Latte: small, medium, large
 Espresso: single, Dubble
 Hot chocolate: small, medium, large
+Matcha Tea: small, medium, large
