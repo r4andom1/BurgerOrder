@@ -1,3 +1,15 @@
+A list of Menu Items currently available:
+
+Meat Menu:
 Big Juicy Burger Combo
 Heartstopper Deluxe
 Jumbo Dumbo Mac
+
+Chicken Menu:
+# Någon ta väck denna raden och skriv här:
+
+Vegan Menu:
+# Någon ta väck denna raden och skriv här:
+
+Fish Menu:
+# Någon ta väck denna raden och skriv här:
