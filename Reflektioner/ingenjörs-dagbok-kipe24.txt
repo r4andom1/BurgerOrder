@@ -14,3 +14,10 @@ Git clienten var en utmaning då det finns så många olika kommandon att komma 
 Githubs hemsida är betydligt enklare då den erbjuder en fin UI som gör det lätt att hitta. 
 Jag komer personligen arbeta mer mot Git cli genom terminalen för att lära mig arbetssättet bättre.
 
+10/9:
+Hade ett möte med gruppen där vi skapade ett nytt dokument för att dokumentera varje persons ansvar för olika delar av uppgiften. 
+Detta dokument kommer vara levande under hela projektet så att varje person kan få en snabb överblick vad som behövs göras just nu,
+vilka nya verktyg de behöver lära sig mer av och generellt bryta ner uppgifterna i mindre bitar så vi enklare kan arbeta med dem.
+
+Tittade också lite på SQL och vi bestämde oss att vi kommer använda PostgreSQL för vår databas. Kommer börja titta i dokumentationen och läsa på mig om hur verktyget funkar.
+
