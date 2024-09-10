@@ -7,6 +7,7 @@ Cold drinks:
 Milk shake: 33cl, 50cl, 70cl 
 Milk 33cl
 Sparkling 33cl 
+Still water 33cl
 
 Soda: 
 Coca Cola: 33cl, 50cl, 70cl
@@ -14,6 +15,7 @@ Fanta: 33cl, 50cl, 70cl
 Sprite: 33cl, 50cl, 70cl
 Fanta exotic: 33cl, 50cl, 70cl
 Cola Zero: 33cl, 50cl, 70cl
+Trocadero: 33cl 50cl 70cl
 
 Hot drink:
 Tea: small, medium, large
