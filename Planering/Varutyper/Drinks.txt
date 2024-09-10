@@ -1,0 +1,24 @@
+our different types of drinks for the Four Guys Hamburger chain
+
+The drinks are available in the sizes small (33cl), medium (50cl), large (70cl) and is displayed on the respective drink. 
+The exception is the hot drinks that are small, medium, large
+
+Cold drinks: 
+Milk shake: 33cl, 50cl, 70cl 
+Milk 33cl
+Sparkling 33cl 
+
+Soda: 
+Coca Cola: 33cl, 50cl, 70cl
+Fanta: 33cl, 50cl, 70cl
+Sprite: 33cl, 50cl, 70cl
+Fanta exotic: 33cl, 50cl, 70cl
+
+
+
+Hot drink:
+Tea: small, medium, large
+Coffee: small, medium, large
+Latte: small, medium, large
+Espresso: single, Dubble
+Hot chocolate: small, medium, large
