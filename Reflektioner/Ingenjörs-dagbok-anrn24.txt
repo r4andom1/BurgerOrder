@@ -5,21 +5,29 @@ Vi tog tillfället och satte oss ner efter föreläsningen och tittade igenom he
 Gruppen konstaterade snabbt att det var väldigt mycket nya tekniker som kommer bli intressanta att titta vidare på senare i kursen.
 
 2024-09-04:
-Alla deltagare i gruppen möttes upp för att sätta sig ner och hjälpas åt med installationer av de olika programmen och försöka få ett hum om vad de  olika programmen är till för och hur de ska nyttjas. 
-Efter mötet så var det dags för den andra föreläsningen för kursen. Efter föreläsningen så tycker jag att det kändes bra, men jag är lite "lost" då  mycket som tas 
+Alla deltagare i gruppen möttes upp för att sätta sig ner och hjälpas åt med installationer av de olika programmen och försöka få ett hum om vad de  
+olika programmen är till för och hur de ska nyttjas. 
+Efter mötet så var det dags för den andra föreläsningen för kursen. Efter föreläsningen så tycker jag att det kändes bra, men jag är lite "lost" då  
+mycket som tas 
 upp är förkortningar och spännande program som man aldrig hört talas om, men med tid så kommer jag förstå allt, det är jag övertygad om! 
 
 2024-09-05
-Idag var det laboration. Gruppen satte sig tillsammans i anvisat klassrum och påbörjade med övningsuppgifter. Laddat ner inteljj då jag missade att  göra det igår, men har inte börjat med att 
-försöka bemästra det. Jag tänker nog att jag kommer köra med vs code istället då jag nyttjar det i den andra kursen jag går samtidigt. Jag valde     istället att försöka lära mig grunderna med github. 
+Idag var det laboration. Gruppen satte sig tillsammans i anvisat klassrum och påbörjade med övningsuppgifter. Laddat ner inteljj då jag missade att  
+göra det igår, men har inte börjat med att 
+försöka bemästra det. Jag tänker nog att jag kommer köra med vs code istället då jag nyttjar det i den andra kursen jag går samtidigt. Jag valde     
+istället att försöka lära mig grunderna med github. 
 Testat funktioner som push, pull, branch, merge och fork, det har gått bra. 
    
 2024-09-11
-Today we had a lecture that focused on debugging and troubleshooting. One thing I picked up from the lecture was the so called 5S which I feel is a  good structure to build your foundation on when it comes to work quality and such. I will surely keep 5S in mind while working in the future
+Today we had a lecture that focused on debugging and troubleshooting. One thing I picked up from the lecture was the so called 5S which I feel is a  
+good structure to build your foundation on when it comes to work quality and such. I will surely keep 5S in mind while working in the future
 
 2024-09-12
 Today I went to the lab-enviroment with my group and started with the excercises that revolved around testing and debugging. As I´m writing this     
-I´ve been stuck on the excercise 4.6 which i had to debug a language (Java) that I don´t know at all but in the end i managed to solve the it by changing one small thing, < to >. My insight for this excercise was that I should put my effort to study the things that are relevant for the time being and not try to dive in to languages I don´t understand yet. Doing python-course in parallel to this course so python will be my focus of language, but what language we will be coding in will be up for debate with the group. 
+I´ve been stuck on the excercise 4.6 which i had to debug a language (Java) that I don´t know at all but in the end i managed to solve the it by 
+changing one small thing, < to >. My insight for this excercise was that I should put my effort to study the things that are relevant for the time 
+being and not try to dive in to languages I don´t understand yet. Doing python-course in parallel to this course so python will be my focus of 
+language, but what language we will be coding in will be up for debate with the group. 
 
 
 
