@@ -6,11 +6,12 @@ Jag skapade en grupp med Kim, André och Jesper. Vi gjorde även en Discord där
 
 
 04-09-2024
-Vi satte oss I Erikson labb och läste igenom uppgiftgen tillsamans för att setill att alla var på samma sida samt ifall att någon hade några frögor eller förslag
+
+Vi satte oss I Erikson labb och läste igenom uppgiftgen tillsamans för att setill att alla var på samma sida samt ifall att någon hade några frögor eller förslag.
 
 05-09-2024
 
-undr labbtilfelet sate vi oss som grupp och diskuterade över vilka program vi skulle använda. Vi beslutade oss för att använda följande:
+Undr labbtilfelet sate vi oss som grupp och diskuterade över vilka program vi skulle använda. Vi beslutade oss för att använda följande:
 Jetbrains, docker, Jdk, Intellij, Vscode, Python och Github 
 Efter att vi hade instalerat de miljöer vi skulle använda sate vi oss som en grupp och började lära oss om hur github fungerar och hur man använnder de olika funktionerna så som: 
 push, pull, fork, branch. För att försöka få en förståelse. Vi jobbade öven med några övningar i java.
@@ -21,7 +22,12 @@ Efter detta gjorde vi en Github server där vi sriver våra ingenjörs dagböker
 Skapade ett dokument där vi dokumenterar vad skom ska göras och hur vi ska göra det. 
 Det kommer vara vår manual över hur vi ska gå tillväga med uppgiften.
 Vi satte också upp våran github flow och har diskuterat hur vi ska brancha och pusha våra olika filer.
-
 Vi delade även upp vem som ska ta vilken varutyp. Jag tog Dricka, André tog hamburgare, Kim tog menyer och Jesper tog tillbehör.
-
 Jag fyllde ut min lista med olika typer av drickor samt vilken storlek det skulle ha. 
+
+12-09-2024
+
+Sins the last time I uppdatd the diory we have gone thro etchuders product tipes and added whate we think the tipickle burger placese have. We still have some more changes to do and add.
+We allso desided to name are burger plase Fore Guy's. We came up whit this name becus like the populer american hamburger place Five Guy's wher five guys that made a fast food chane we are four guy's that are making one. 
+
+Me and my grupp under the lab time praktist debugging in java whit in vs code. Usen what vs code prevaids and geting a depper understanding on how to use de testing and debugging fetur. This will help us under are time working whit the burger meny asagnment. 
