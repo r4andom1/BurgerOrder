@@ -1,3 +1,6 @@
+Engineering Diary from kipe24. 
+Will update when i have meaningful info to contribute to the diary.
+
 3/9: 
 Skapade en grupp med fyra gruppmedlemmar. Vi satt oss ner och läste igenom hela uppgiften och började 
 diskutera och bolla idéer om hur vi vill göra uppgiften samt vilka tekniker vi vill använda oss av. 
@@ -14,10 +17,14 @@ Git clienten var en utmaning då det finns så många olika kommandon att komma 
 Githubs hemsida är betydligt enklare då den erbjuder en fin UI som gör det lätt att hitta. 
 Jag komer personligen arbeta mer mot Git cli genom terminalen för att lära mig arbetssättet bättre.
 
-10/9:
-Hade ett möte med gruppen där vi skapade ett nytt dokument för att dokumentera varje persons ansvar för olika delar av uppgiften. 
-Detta dokument kommer vara levande under hela projektet så att varje person kan få en snabb överblick vad som behövs göras just nu,
-vilka nya verktyg de behöver lära sig mer av och generellt bryta ner uppgifterna i mindre bitar så vi enklare kan arbeta med dem.
+12/9:
+Since the last update i've been delving deeper into Git & Github. 
+As a group we've added new branches to our repo and made a plan on how to work on the different branches.
+We're going to have a Developement branch that is a copy of our main branch, and a feature branch where we work on new features
+that later will be merged back to the Development branch. This will ensure that we isolate new code that we want to work on
+and make it easier to see if there will be any merging problems when merging back to our Development branch.
+When we're absolutely sure no merging problems will occur we can then merge it into the main branch. Ensuring that the main Branch 
+is never broken.
 
-Tittade också lite på SQL och vi bestämde oss att vi kommer använda PostgreSQL för vår databas. Kommer börja titta i dokumentationen och läsa på mig om hur verktyget funkar.
-
+I need to continue working on our groups git-workflow to make pushing new features more consistant and efficient. 
+To do this i need to read up on what the different commands in git does in more detail and also continue adding more meaingful content to our github repo.
