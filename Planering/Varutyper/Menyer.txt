@@ -2,7 +2,7 @@ A list of Menu Items currently available:
 
 Meat Menu:
 Big Juicy Burger Combo
-#Exempel
+#Example
 {
 1 Megaburger
 1 Soda 70cl
