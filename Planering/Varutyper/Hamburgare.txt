@@ -53,3 +53,27 @@ meat: beef
 toppings: bacon, cheddar, avocado
 topping-sauce: mayonnaise
 }
+
+Planteraburger
+{
+bread: glutenfree bread
+meat: plant-based
+toppings: tomato, salad, yellow onion
+topping-sauce: Honey Mustard-sauce 
+}
+
+Green smash burger
+{
+bread: Potato bread
+meat: 2 plant-based
+toppings: pickled red onion, tomato, cheddar
+topping-sauce: sambal-sauce
+}
+
+Avocado Dream burger
+{
+bread: Brioche
+meat: plant-based
+toppings: avocado, mozzarella
+topping-sauce: jalapeño mayonnaise
+}
