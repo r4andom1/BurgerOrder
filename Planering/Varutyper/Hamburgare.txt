@@ -42,3 +42,14 @@ Fourguys special formula-sauce
 jalapeño mayonnaise
 mayonnaise
 cheese sauce
+
+Completed burgers:
+
+#Example
+Megaburger
+{
+bread: potato bread
+meat: beef
+toppings: bacon, cheddar, avocado
+topping-sauce: mayonnaise
+}
