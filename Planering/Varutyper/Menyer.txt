@@ -7,6 +7,7 @@ Big Juicy Burger Combo
 1 Megaburger
 1 Soda 70cl
 1 Fries medium
+1 Cheddar dip
 }
 
 Heartstopper Deluxe
