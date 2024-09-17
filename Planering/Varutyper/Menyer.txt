@@ -14,9 +14,29 @@ Heartstopper Deluxe
 Jumbo Dumbo Mac
 
 Chicken Menu:
+
 Spicy chick
+{
+1 Spicy chick 
+1 Soda 70cl
+1 Fries medium
+1 Buffalo Hot Sauce
+}
+
 Chick a la natural
+{
+1 Chick a la natural
+1 Soda 70cl
+1 Fries medium
+}
+
 Crispy chick supreme
+{
+1 Crispy chick supreme
+1 Soda 70cl
+1 Fries medium
+1 Sweet & Spicy Honey Sauce
+}
 
 Vegan Menu:
 Planteraburger
@@ -24,6 +44,26 @@ Green smash burger
 Avocado Dream burger
 
 Fish Menu:
-Filet-O-Fish
-Just Fried Fish
-Fish Attack
+Filet-O-Fish Combo
+{
+1 Filet-O-Fish
+1 Milk shake 50cl
+1 Chili Cheese 4pc
+1 BBQ dip
+}
+
+Just Fried Fish Combo
+{
+1 Deep-fried fiesta burger
+1 Hot drink medium
+1 Sweet potato fries small
+1 Sweet & Spicy Honey Sauce
+}
+
+Fish Attack Deluxe
+{
+2 Fishing hook burger
+2 Sparkling 33cl
+2 Sourcream & pepper dips
+}
+

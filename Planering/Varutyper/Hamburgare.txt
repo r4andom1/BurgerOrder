@@ -55,7 +55,6 @@ topping-sauce: mayonnaise
 }
 
 
-
 Fish Menu:
 
 Filet-O-Fish
@@ -80,4 +79,29 @@ bread: potato bread
 meat: fish
 toppings: yellow onion, silver onion, red onion, spicy cheddar
 topping-sauce: jalapeno mayonnaise
+
+Completed chicken menus:
+
+Spicy chick
+{
+bread: brioche
+meat: chicken
+toppings: spicy cheddar, pickled red onion, salad
+toppings-sauce: jalapeño mayonnaise
+}
+
+Chick a la natural
+{
+bread: french toast
+meat: chicken
+toppings: cheddar
+toppings-sauce: mayonnaise, ketchup
+}
+
+Crispy chick supreme
+{
+bread: Sourdough bread
+meat: chicken
+toppings: cheddar, silver onion, avocado, salad, tomato, bacon
+toppings-sauce: Fourguys special formula-sauce
 }
