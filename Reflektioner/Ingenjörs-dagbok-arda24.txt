@@ -27,7 +27,21 @@ Jag fyllde ut min lista med olika typer av drickor samt vilken storlek det skull
 
 12-09-2024
 
-Sins the last time I uppdatd the diory we have gone thro etchuders product tipes and added whate we think the tipickle burger placese have. We still have some more changes to do and add.
-We allso desided to name are burger plase Fore Guy's. We came up whit this name becus like the populer american hamburger place Five Guy's wher five guys that made a fast food chane we are four guy's that are making one. 
+Sins the last time I uppdatd the diory we have gone thro etchuders product tipes and added whate we think the tipickle burger placese have. We 
+still have some more changes to do and add.
+We allso desided to name are burger plase Fore Guy's. We came up whit this name becus like the populer american hamburger place Five Guy's wher 
+five guys that made a fast food chane we are four guy's that are making one. 
 
-Me and my grupp under the lab time praktist debugging in java whit in vs code. Usen what vs code prevaids and geting a depper understanding on how to use de testing and debugging fetur. This will help us under are time working whit the burger meny asagnment. 
+Me and my grupp under the lab time praktist debugging in java whit in vs code. Usen what vs code prevaids and geting a depper understanding on 
+how to use de testing and debugging fetur. This will help us under are time working whit the burger meny asagnment. 
+
+17-09-2024
+
+We hade a lecture today where are teacher talked abaut the assignment and it got me to reflect a little over the assignment and I got a clearer 
+view over what we needed to do and how we are going to get there. He also talked about the importance of writing good code from the beginning 
+and to not use any unecessary comments. 
+
+Afther the lecture we sat down in the erickson labratory and went ower are plans for the asagnemnt and we complited the menys whit what every 
+birger had in and thet the menys hade a burger, drinck, side and dip. We allso reflected ower what we are useing for the prodject and we picked 
+python for language, flask for frame wher, html and css for the webbpage (We only use css to make the webbpage more redebule for us). We picked 
+docker for database and SQL to handle the data. We also removed and fixed some text in are task documentation so we can go back in it and se what we have done and what we have to do. It will also help use when we are writing the summury of the text. 
