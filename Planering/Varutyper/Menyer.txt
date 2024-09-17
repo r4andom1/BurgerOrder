@@ -24,6 +24,26 @@ Green smash burger
 Avocado Dream burger
 
 Fish Menu:
-Filet-O-Fish
-Just Fried Fish
-Fish Attack
+Filet-O-Fish Combo
+{
+1 Filet-O-Fish
+1 Milk shake 50cl
+1 Chili Cheese 4pc
+1 BBQ dip
+}
+
+Just Fried Fish Combo
+{
+1 Deep-fried fiesta burger
+1 Hot drink medium
+1 Sweet potato fries small
+1 Sweet & Spicy Honey Sauce
+}
+
+Fish Attack Deluxe
+{
+2 Fishing hook burger
+2 Sparkling 33cl
+2 Sourcream & pepper dips
+}
+
