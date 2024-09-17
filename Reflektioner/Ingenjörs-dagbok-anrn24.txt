@@ -30,13 +30,20 @@ being and not try to dive in to languages I don´t understand yet. Doing python-
 language, but what language we will be coding in will be up for debate with the group. 
 
 2024-09-17
-Since last time writing in the diary not much has happened specifically on the course, until today. The day started with a lecture about the different variations on how you can finish this course and different methods. This lecture was a relief in a way because he gave answers to alot of concerns I had, such as the implemetation of the code. For me, this is a whole new world, so knowing that I dont have to be an expert on coding to solve this gives me peace in mind. 
+Since last time writing in the diary not much has happened specifically on the course, until today. The day started with a lecture about the      
+different variations on how you can finish this course and different methods. This lecture was a relief in a way because he gave answers to alot of 
+concerns I had, such as the implemetation of the code. For me, this is a whole new world, so knowing that I dont have to be an expert on coding to 
+solve this gives me peace in mind. 
 
-Afterwards we went to Ericsson Space lab and continued the work on our txt files that have the data on all the ingredients and menus for the project. Today I commited changes to menus.txt and  hamburgers.txt and specifically the chicken menus/burgers. The changes was that i made what exactly was included in the chicken menus aswell as added for example what a "Spicy chick burger" had in it. 
+Afterwards we went to Ericsson Space lab and continued the work on our txt files that have the data on all the ingredients and menus for the 
+project. Today I commited changes to menus.txt and  hamburgers.txt and specifically the chicken menus/burgers. The changes was that i made what 
+exactly was included in the chicken menus aswell as added for example what a "Spicy chick burger" had in it. 
 
-The group came to a conclusion and decided that we will use python as a language, flask for the framework, drawsql and postgre for the database and html and css for the site. Docker will be used as well but later on. 
+The group came to a conclusion and decided that we will use python as a language, flask for the framework, drawsql and postgre for the database and 
+html and css for the site. Docker will be used as well but later on. 
 
-I feel good after this day, I feel like even though I don't have great knowledge in this field I feel confident that I will grow alot in this field. My focus will be on learning tha new tools and try to include myself in all the small parts in the project that is to come. 
+I feel good after this day, I feel like even though I don't have great knowledge in this field I feel confident that I will grow alot in this field. 
+My focus will be on learning tha new tools and try to include myself in all the small parts in the project that is to come. 
 
 I feel good!
 
