@@ -14,9 +14,29 @@ Heartstopper Deluxe
 Jumbo Dumbo Mac
 
 Chicken Menu:
+
 Spicy chick
+{
+1 Spicy chick 
+1 Soda 70cl
+1 Fries medium
+1 Buffalo Hot Sauce
+}
+
 Chick a la natural
+{
+1 Chick a la natural
+1 Soda 70cl
+1 Fries medium
+}
+
 Crispy chick supreme
+{
+1 Crispy chick supreme
+1 Soda 70cl
+1 Fries medium
+1 Sweet & Spicy Honey Sauce
+}
 
 Vegan Menu:
 Planteraburger
