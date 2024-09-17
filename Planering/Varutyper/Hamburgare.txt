@@ -53,3 +53,29 @@ meat: beef
 toppings: bacon, cheddar, avocado
 topping-sauce: mayonnaise
 }
+
+Completed chicken menus:
+
+Spicy chick
+{
+bread: brioche
+meat: chicken
+toppings: spicy cheddar, pickled red onion, salad
+toppings-sauce: jalapeño mayonnaise
+}
+
+Chick a la natural
+{
+bread: french toast
+meat: chicken
+toppings: cheddar
+toppings-sauce: mayonnaise, ketchup
+}
+
+Crispy chick supreme
+{
+bread: Sourdough bread
+meat: chicken
+toppings: cheddar, silver onion, avocado, salad, tomato, bacon
+toppings-sauce: Fourguys special formula-sauce
+}
