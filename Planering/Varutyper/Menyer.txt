@@ -1,17 +1,32 @@
 A list of Menu Items currently available:
 
 Meat Menu:
+
 Big Juicy Burger Combo
-#Example
 {
-1 Megaburger
+1 Big Juicy Burger
 1 Soda 70cl
-1 Fries medium
-1 Cheddar dip
+1 Fries Medium
+1 Mozzarella Sticks
 }
 
 Heartstopper Deluxe
+{
+1 Heartstopper Burgare
+1 Soda 70cl
+1 Fries Large
+1 Chicken Nuggets 6pc
+1 Cheddar Dip
+1 Sourcream & Pepper Dip
+}
+
 Jumbo Dumbo Mac
+{
+1 Jumbo Dumbo Burger
+1 Soda 70cl
+1 Fries Medium
+1 BBQ Dip
+}
 
 Chicken Menu:
 
