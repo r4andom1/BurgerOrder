@@ -1,0 +1,130 @@
+Different kinds of bread:
+
+Brioche
+Potato bread
+Sourdough bread
+french toast
+glutenfree bread
+
+
+Different kind of meat:
+
+beef
+fish
+chicken
+plant-based
+
+
+toppings:
+
+Bacon
+cheddar
+spicy cheddar
+silver onion 
+yellow onion
+red onion
+pickled red onion
+pickle
+salad
+tomato
+mozzarella
+avocado
+
+
+topping sauce:
+
+ketchup
+Honey Mustard-sauce
+Tennessee BBQ-sauce
+sambal-sauce
+mustard
+Fourguys special formula-sauce
+jalapeño mayonnaise
+mayonnaise
+cheese sauce
+
+Completed burgers:
+
+#Example
+Megaburger
+{
+bread: potato bread
+meat: beef
+toppings: bacon, cheddar, avocado
+topping-sauce: mayonnaise
+}
+
+Planteraburger
+{
+bread: glutenfree bread
+meat: plant-based
+toppings: tomato, salad, yellow onion
+topping-sauce: Honey Mustard-sauce 
+}
+
+Green smash burger
+{
+bread: Potato bread
+meat: 2 plant-based
+toppings: pickled red onion, tomato, cheddar
+topping-sauce: sambal-sauce
+}
+
+Avocado Dream burger
+{
+bread: Brioche
+meat: plant-based
+toppings: avocado, mozzarella
+topping-sauce: jalapeño mayonnaise
+
+
+Fish Menu:
+
+Filet-O-Fish
+{
+bread: brioche
+meat: fish
+toppings: cheddar, pickled red onion, salad
+topping-sauce: ketchup
+}
+
+Deep-fried fiesta burger
+{
+bread: sourdough bread
+meat: fish
+toppings: pickle, tomato, bacon, avocado
+topping-sauce: fourguys special formula sauce
+}
+
+Fishing hook burger
+{
+bread: potato bread
+meat: fish
+toppings: yellow onion, silver onion, red onion, spicy cheddar
+topping-sauce: jalapeno mayonnaise
+
+Completed chicken menus:
+
+Spicy chick
+{
+bread: brioche
+meat: chicken
+toppings: spicy cheddar, pickled red onion, salad
+toppings-sauce: jalapeño mayonnaise
+}
+
+Chick a la natural
+{
+bread: french toast
+meat: chicken
+toppings: cheddar
+toppings-sauce: mayonnaise, ketchup
+}
+
+Crispy chick supreme
+{
+bread: Sourdough bread
+meat: chicken
+toppings: cheddar, silver onion, avocado, salad, tomato, bacon
+toppings-sauce: Fourguys special formula-sauce
+}

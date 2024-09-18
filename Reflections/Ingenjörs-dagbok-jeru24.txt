@@ -1,0 +1,54 @@
+03-09
+Grupp skapad, pratade om uppgiften i sig och skapade en privat gruppchat där vi kan nå 
+varandra och dela länkar till tutorials & få kontakt med varandra på ett smidigt sätt.
+
+04-09
+Vi träffadesa och installerade de program som vi kan tänkas behöva, Docker, Git, IDEs vi
+bestämde också oss för vad vi skulle använda för teknologier ie Docker istället för Podman.
+Vi bestämde oss också för att använda oss av en relationsdatabas däremot måste vi i framtiden
+bestämma vilken vi ska välja MySQL/PostreSQL... Man känner sig ganska vilse i uppgiften
+just nu men jag tror att det blir bättre när man väl får ner en plan på hur vi ska genomföra
+den.
+
+05-09
+Laboration där jag började gräva ner mig i det oändliga hålet av möjligheter med Git. Använder
+mig av terminalen och testar några grundläggande kommandon. Har tidigare endast använd mig av
+gränssnitt såsom GitHub Desktop och har insett att det finns många saker Git kan göra som du 
+inte kan använda själv med ett sådant gränssnitt. Tittade senare på dagen på video-tutorials 
+på Git vilket verkade som både repetition men hjälpde mig få in lite nytt i huvudet också.
+Jag tänker mig att från början behöver jag bara få ner det grundläggande och att det tillåter
+mig att i framtiden lättare utilisera lite mer avancerade koncept som Git har att erbjuda.
+
+10-09
+Gruppen möttes efter föreläsningen och vi skapade ett dokument där vi gör upp en plan, samlar
+kärndelar från uppgiftsbeskrivningen och förklarar hur vi tänker gå tillväga. Vi började även
+att ta våran egen varutyp och fylla på med information. Det vi i framtiden behöver göra är att
+analysera uppgiften och bryta ner den, detta gör det mycket lättare att förstå hur saker ska fungera
+och interagera då det är svårt att titta på en helhet och se allt det. Tillslut bestämde vi oss också
+att använda oss av PostegreSQL, jag rekommenderade tidigare att vi bör använda en relationsdatabas
+på grund av dess robusthet och att det är i min åsikt bäst att lära sig på grund av strukturen och
+dess presteringsförmåga. Eftersom jag tidigare jobbat med databaser föreslog jag också PostgreSQL
+på grund av att den har en enorm community men även ligger framför MySQL i vissa delar som att
+Postgres också kan köra NoSQL vilket jag tror är bättre för de som lär sig första gången då de
+senare efter använt Postgres för relationsdatabaser också lättare kan förstå och testa NoSQL där.
+Det sista som gjordes idag var att komma överens om hur vi ska versionshantera, vi kommer att köra
+på Git flow med en main branch och en development branch, sedan baseras Feature branches på development
+och development kan forkas till en ny release branch som sedan mergas till main. Full förklaring här:
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+Det har varit lite tjorv i början när alla lär sig GitHub och Git men nu har vi alla pratat ihop oss
+och alla branches kommer användas enligt Git flow principerna i framtiden. Att få ordning och reda
+på detta tror jag kommer betalas tillbaka 100 gånger då vi verkligen lär oss hur man vill gå tillväga
+istället för att bara slänga in allt i main och ha noll koll när man väl vill titta på vad som gjorts.
+
+17-09
+Today we had a lecture with some more details on how the project could be set up with examples shown using Express and Flask. Our 
+group later met and discussed. We decided to go with Flask as we are currently also in a python course, this prevents some newer 
+programmers in the group to be exposed to the world of javascript and can continue to focus on the fundamentals with the a bit more 
+familiar python syntax. I have since last time started designing the database structure and the database will be my main 
+responsibility even though ill dip my toes in each part as im familiar with apis and web development aswell. Right now i have 
+realised the database has some flaws when it comes to different parts of the burger ex bread topping and sauce, which are all under 
+topping. This will in the future prevent grouping of "bread" "sauces" .. when the user wants to customize the burger. Ill look into 
+this issue and try to improve the database structure in general to be optimized. Its done in postgres and im using drawsql to plan 
+the database structure. Today we have also finished all the different items like menues and what the burgers contain in terms of 
+toppings / what menues contain in terms of sides, drinks etc. Now i have all the data that should be pushed into the database so i 
+can do that when i have more of a prototype. 
