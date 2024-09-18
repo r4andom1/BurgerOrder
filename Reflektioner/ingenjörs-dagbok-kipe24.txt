@@ -28,15 +28,3 @@ is never broken.
 
 I need to continue working on our groups git-workflow to make pushing new features more consistant and efficient. 
 To do this i need to read up on what the different commands in git does in more detail and also continue adding more meaingful content to our github repo.
-
-17/9:
-I've been working more on Github and now am starting to understand the different tools and features in a deeper way.
-We're been continuously adding to the Github reposition with more text and also started dividing the different menus for us to use in our database later on.
-We've decided to use PostgreSQL for our relational database because it gives us more flexibility on how to set up our data. 
-We're using DrawSQL to help the team visualise how our database will work and how the different tables will interect with eachother.
-We will also use Python as our primary programming language because its a language everyone in the group are used to.
-Coupled with the Flask framework for python it will allow us to more easily interact and set up the network connection.
-
-I am going to learn more how Flask works and start tinkering with our website. I will also continue working on understanding and contributing to our datebase via
-the DrawSQL site. I will also work more with testing but towards Python since i felt it was pretty hard to understand the Java code in our last lab session. 
-I can learn more about testing if i use a programming language i am more comfortable with.
