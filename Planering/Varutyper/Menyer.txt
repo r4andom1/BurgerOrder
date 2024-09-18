@@ -4,7 +4,7 @@ Meat Menu:
 
 Big Juicy Burger Combo
 {
-1 Big Juicy Burger
+1 Planterarburger
 1 Soda 70cl
 1 Fries Medium
 1 Mozzarella Sticks
@@ -12,7 +12,7 @@ Big Juicy Burger Combo
 
 Heartstopper Deluxe
 {
-1 Heartstopper Burgare
+1 Green smash burger
 1 Soda 70cl
 1 Fries Large
 1 Chicken Nuggets 6pc
@@ -22,7 +22,7 @@ Heartstopper Deluxe
 
 Jumbo Dumbo Mac
 {
-1 Jumbo Dumbo Burger
+1 Avocado dream burger
 1 Soda 70cl
 1 Fries Medium
 1 BBQ Dip
