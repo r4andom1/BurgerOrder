@@ -1,0 +1,23 @@
+Ingenjörs Dagbok
+
+03-09-2024
+
+Skapade en grupp med Kim, André och Jesper. Vi gjorde även en Discord där vi diskuterar lite vad vi ska göra och delar länkar till bra underlag för arbetet
+Gjorde en github server
+
+04-09-2024
+
+Laddade ner följande program: 
+Jetbrains
+docker
+Jdk
+Intellij 
+
+Efter vi hade instalerat de miljöer vi skulle använda sate vi oss som en grupp och började lära oss om hur github fungerar och hur man använnder de olika funktionerna. Som push, pull, fork, branch. För att försöka få en förståelse. Vi jobbade öven med några övningar i java.
+
+10-09-2024
+
+Skapade ett dokument där vi dokumenterar vad skom ska göras och hur vi ska göra det. 
+Det kommer vara vår manual över hur vi ska gå tillväga med uppgiften. 
+
+Vi delade öven upp vem som ska göra vad i början. 
