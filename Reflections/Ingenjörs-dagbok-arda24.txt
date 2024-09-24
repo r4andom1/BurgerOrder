@@ -44,7 +44,8 @@ We also updated and fixed some text in our task documentation so we can refer ba
 
 24-09-2024
 
-Since the last diary entry, we have gotten our feature branches in GitHub to work. It took us a few hours to get it to work. The problem we found was that when we created the branches in the command interpreter, they didn’t connect to GitHub correctly, so we couldn’t use them. However, by either 
+Since the last diary entry, we have gotten our feature branches in GitHub to work. It took us a few hours to get it to work. The problem we found was that when we created the branches in the command interpreter, 
+they didn’t connect to GitHub correctly, so we couldn’t use them. However, by either 
 creating the branches directly in GitHub or manually setting the paths, we got it to work. Now we can push and pull and work together on the feature branches, which will make the project a lot cleaner and easier to 
 manage.
 
@@ -52,3 +53,5 @@ Today, we created the web pages for our burger order system. We are using Flask 
 we have different CSS files for each HTML page.
 By sitting down today and working together on the web pages, we got a clearer picture of what we, as a group, envision for our finished program. This makes it much easier to identify the steps we need to take to 
 complete the program.
+
+Tomorrow, we have planned to get together as a group again before the lecture to discuss some more and to review everything, and make sure we aren't missing anything.
