@@ -33,6 +33,7 @@ p {
 a {
     color: #007bff;
     text-decoration: none;
+    text-align: center;
 }
 
 a:hover {
