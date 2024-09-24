@@ -13,7 +13,10 @@ def order_page():
     """ Order page """
     return render_template("order-page.html")
 
-
+@app.route("/order-completed")
+def order_completed_page():
+    """ Order completed page """
+    return render_template("order-completed.html")
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=8000)
