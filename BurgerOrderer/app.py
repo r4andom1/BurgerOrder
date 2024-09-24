@@ -8,6 +8,11 @@ def front_page():
     """ Frontpage """
     return render_template("home.html")
 
+@app.route("/order")
+def order_page():
+    """ Order page """
+    return render_template("order-page.html")
+
 
 
 if __name__ == "__main__":
