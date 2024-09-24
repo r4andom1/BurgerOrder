@@ -2,6 +2,9 @@
     text-align: center;
     font-size: 1.2em;
     color: #495057;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,10 +23,6 @@ h1 {
     border-bottom: 2px solid hsl(271, 100%, 35%);
 }
 
-p {
-    
-}
-
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -33,6 +32,24 @@ p {
     border-radius: 8px;
     margin-top: 50px;
 }
+
+.flex-container {
+    display: flex;
+    background-color: red;
+    width: 600px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 30px;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+  }
 
 a {
     color: #007bff;
