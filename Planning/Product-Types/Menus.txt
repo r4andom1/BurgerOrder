@@ -89,7 +89,7 @@ Filet-O-Fish Combo
 Just Fried Fish Combo
 {
 1 Deep-fried fiesta burger
-1 Hot drink medium
+1 Hot Coffee medium
 1 Sweet potato fries small
 1 Sweet & Spicy Honey Sauce
 }
