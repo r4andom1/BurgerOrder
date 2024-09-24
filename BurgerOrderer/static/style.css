@@ -11,7 +11,9 @@ h1 {
     text-align: center;
     padding: 20px;
     background-color: hsl(0, 0%, 0%);
-    border-bottom: 2px solid hsl(271, 100%, 35%);
+    border-bottom: 3px solid hsl(271, 100%, 35%);
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 3rem;
 }
 
 p {
