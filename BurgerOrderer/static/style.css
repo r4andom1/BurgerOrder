@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -7,11 +10,10 @@ body {
 }
 
 h1 {
-    color: hsl(271, 63%, 61%);
+    color: hsl(0, 0%, 0%);
     text-align: center;
     padding: 20px;
-    background-color: hsl(0, 0%, 0%);
-    border-bottom: 3px solid hsl(271, 100%, 35%);
+    border-bottom: 3px solid hsl(0, 0%, 0%);
     font-family: 'Protest Guerrilla', sans-serif;
     font-size: 3rem;
 }
@@ -30,7 +32,7 @@ p {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 8px 45%;
     cursor: pointer;
     background-color: rgb(62, 255, 62);
 }
