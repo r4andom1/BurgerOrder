@@ -52,3 +52,6 @@ this issue and try to improve the database structure in general to be optimized.
 the database structure. Today we have also finished all the different items like menues and what the burgers contain in terms of 
 toppings / what menues contain in terms of sides, drinks etc. Now i have all the data that should be pushed into the database so i 
 can do that when i have more of a prototype. 
+
+26-09
+Today we had a laboration on Docker. I have learned the basic pillars of Docker and watched some other tutorials to better understand fundamentals. I feel like ive grasped the functionality of a Dockerfile, image, container and volumes. Ive also learned some basic docker commands and how you can build a docker file with remapping ports etc. I understand how the functionality of docker is wanted today and i also feel like docker is kind of like git. The basics are easy but the possibilities are endless, especially when you introduce things like Kubernetes. Ill continue to learn and try to make it work by myself as learning by doing seems like a good choice with Docker.
