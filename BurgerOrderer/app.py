@@ -13,6 +13,13 @@ def order_page():
     """ Order page """
     return render_template("order-page.html")
 
+
+@app.route("/order/category")
+def order_meat():
+    """ Menu choice page """
+    return render_template("order-category.html")
+
+
 @app.route("/order-completed")
 def order_completed_page():
     """ Order completed page """
