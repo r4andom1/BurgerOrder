@@ -1,0 +1,12 @@
+docker build -t menustore-db .
+
+docker run -d --name menustore-container -p 5433:5432 menustore-db
+
+this will be put into a docker compose when time comes
+
+to connect to db in terminal:
+docker exec -it menustore-container psql -U admin -d menustore
+
+\l # lists available databases
+\c menustore # connect to menustore
+\dt # list tables
