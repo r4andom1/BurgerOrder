@@ -53,5 +53,31 @@ the database structure. Today we have also finished all the different items like
 toppings / what menues contain in terms of sides, drinks etc. Now i have all the data that should be pushed into the database so i 
 can do that when i have more of a prototype. 
 
+-
+
+Somewhere between the last and the commit after this one....
+
+We got together in a group room and got everyone in the loop of what our thoughts were and what we were going to do.
+I also presented the database, how the tables work and how it can be used. I drew a database schema that further
+shows the relation between tables even though the many to one etc lines are not correct it gives a rough idea of what 
+id in this table is the same as that id in another table. An .sql file was also exported and put into the git repo,
+i also showed the group how it can be imported into pgadmin so everyone can play around with queries and such.
+
 26-09
-Today we had a laboration on Docker. I have learned the basic pillars of Docker and watched some other tutorials to better understand fundamentals. I feel like ive grasped the functionality of a Dockerfile, image, container and volumes. Ive also learned some basic docker commands and how you can build a docker file with remapping ports etc. I understand how the functionality of docker is wanted today and i also feel like docker is kind of like git. The basics are easy but the possibilities are endless, especially when you introduce things like Kubernetes. Ill continue to learn and try to make it work by myself as learning by doing seems like a good choice with Docker.
+Today we had a laboration on Docker. I have learned the basic pillars of Docker and watched some other tutorials to better understand fundamentals. 
+I feel like ive grasped the functionality of a Dockerfile, image, container and volumes. Ive also learned some basic docker commands and how you can 
+build a docker file with remapping ports etc. I understand how the functionality of docker is wanted today and i also feel like docker is kind of like git. 
+The basics are easy but the possibilities are endless, especially when you introduce things like Kubernetes. Ill continue to learn and try to make it work by myself as 
+learning by doing seems like a good choice with Docker.
+
+
+02-10
+Today we dcokerized the databased. Seeing as it was already finished we thought it would be a good test subject. It was not as easy as we first thought.
+Eventually we had a working dockerfile and i also added an instructions file that contains the commands to build the image and the container. This will
+in the future go into a compose file so its even easier. At first i had some issues importing the database, but after reading the log file of the container
+it was quite clear what the issue was so a quick google solved it. To verify it actually worked i also tried connecting to the db in the container using psql
+in the terminal. After verifiying all tables were there we were good to go. Everyone also tried installing the image and run the container and to no suprise 
+docker works as it should for everyone  :) The next step would be for us to connect to the database! I have done this with both js and php in the past so i doubt we 
+will have any issues doing it with python, but who knows!
+
+
