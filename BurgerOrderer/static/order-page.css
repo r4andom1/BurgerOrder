@@ -1,0 +1,60 @@
+* {
+    text-align: center;
+    border: 1px solid hsl(0, 100%, 50%);
+    font-size: 1.2em;
+    color: hsl(0, 5%, 12%);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+}
+
+h1 {
+    color: hsl(271, 63%, 61%);
+    padding: 20px;
+    background-color: hsl(0, 0%, 0%);
+    border-bottom: 2px solid hsl(271, 100%, 35%);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    flex-wrap: wrap;
+
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.flex-container a {
+    flex: 1 0 33.33%;
+    aspect-ratio: 1/1;
+    border: 5px solid green;
+}
+
+.catagory { /* Ändrar innehållet INUTI flex-container*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: hsl(211, 100%, 50%);
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    color: hsl(211, 56%, 32%);
+}
