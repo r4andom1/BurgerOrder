@@ -80,4 +80,9 @@ in the terminal. After verifiying all tables were there we were good to go. Ever
 docker works as it should for everyone  :) The next step would be for us to connect to the database! I have done this with both js and php in the past so i doubt we 
 will have any issues doing it with python, but who knows!
 
-
+04-10
+Today we managed to connect to the database with python psycopg2, i made an example site that fetches all toppings from the db and builds up some html thats
+in turn passed into a html template so we will still have great utilization of the template feature. I also realize now how nice it is to have a drawn database
+schema because all the column names and table names are listed so you can easily write SQL queries without having to open pgadmin or such. The container port
+is also remapped so 5432 in the container is 5433 outside since 5432 is the pg service port and i dont want the db to not work just because someone is running
+a postgres service on their pc, then its just better to use a free port instead and it works great as long as you specify the port when connecting to the db
