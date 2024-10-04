@@ -1,5 +1,6 @@
 * {
     text-align: center;
+    border: 1px solid red;
     font-size: 1.2em;
     color: #495057;
     padding: 0px;
@@ -23,34 +24,23 @@ h1 {
     border-bottom: 2px solid hsl(271, 100%, 35%);
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-top: 50px;
-}
-
 .flex-container {
     display: flex;
-    background-color: red;
-    width: 600px;
+    flex-direction: row;
+    width: 60vw;
     flex-wrap: wrap;
-    margin: auto;
+    
 }
 
-.flex-container > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 30px;
-    font-size: 30px;
-    align-items: center;
+.flex-wrapper {
+    display: flex;
     justify-content: center;
-    width: 200px;
-  }
+}
 
+.flex-container div {
+    flex: 1 0 33.33%;
+    aspect-ratio: 1/1;
+}
 a {
     color: #007bff;
     text-decoration: none;
