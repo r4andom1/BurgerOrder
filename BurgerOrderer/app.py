@@ -1,7 +1,17 @@
 """ BurgerOrderer"""
 from flask import Flask, render_template
+from db import connect
+import db_fetch
 
 app = Flask(__name__)
+
+@app.route("/toppings")
+def toppings():
+    """ Toppings test page """
+
+    toppings_html = db_fetch.fetch_topping_html()
+    return render_template("toppings.html", toppings_list=toppings_html)
+
 
 @app.route("/")
 def front_page():
