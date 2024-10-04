@@ -1,8 +1,8 @@
 * {
     text-align: center;
-    border: 1px solid red;
+    border: 1px solid hsl(0, 100%, 50%);
     font-size: 1.2em;
-    color: #495057;
+    color: hsl(0, 5%, 12%);
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -18,7 +18,6 @@ body {
 
 h1 {
     color: hsl(271, 63%, 61%);
-    text-align: center;
     padding: 20px;
     background-color: hsl(0, 0%, 0%);
     border-bottom: 2px solid hsl(271, 100%, 35%);
@@ -29,24 +28,33 @@ h1 {
     flex-direction: row;
     width: 60vw;
     flex-wrap: wrap;
-    
+
 }
 
 .flex-wrapper {
     display: flex;
     justify-content: center;
+    
 }
 
-.flex-container div {
+.flex-container a {
     flex: 1 0 33.33%;
     aspect-ratio: 1/1;
+    border: 5px solid green;
 }
+
+.catagory { /* Ändrar innehållet INUTI flex-container*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 a {
-    color: #007bff;
+    color: hsl(211, 100%, 50%);
     text-decoration: none;
     text-align: center;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: hsl(211, 56%, 32%);
 }
