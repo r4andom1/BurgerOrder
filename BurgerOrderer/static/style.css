@@ -31,14 +31,15 @@ p {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    border-radius: 5px;
+    font-size: 20px;
     margin: 8px 45%;
     cursor: pointer;
-    background-color: rgb(62, 255, 62);
+    background-color: hsl(120, 82%, 48%);
 }
 .order-button:hover {
     background-color: #c0baba;
-    color: black;
+    color: hsl(120, 50%, 44%);
 }
 
 .container {
@@ -51,12 +52,11 @@ p {
     margin-top: 50px;
 }
 
+.container > p > a:hover {
+    text-decoration: underline;
+}
 a {
     color: #007bff;
     text-decoration: none;
     text-align: center;
-}
-
-a:hover {
-    text-decoration: underline;
 }
