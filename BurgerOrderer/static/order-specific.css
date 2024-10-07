@@ -7,7 +7,6 @@
 } 
 body {
     font-family: monospace, sans-serif;
-    width: 800px;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -33,10 +32,11 @@ h1 {
 .category-menus {
     display: flex;
     flex-wrap: wrap;
+    flex: 1;
     
-    justify-content: space-around;
-    align-items:center;
-    gap: 50px;
+    justify-content: center;
+    align-items:flex-start;
+    gap: 25px;
 
 }
 
@@ -47,6 +47,15 @@ h1 {
     padding: 15px 0;
     cursor: pointer;
     border: 1px solid black;
+}
+
+.item div {
+    font-size: 50px;
+    padding: 0 10px;
+}
+
+.item div:hover {
+    color: green;
 }
 
 .item p {
