@@ -20,7 +20,7 @@ body {
     color: #212529;
 }
 
-h1 {
+.top {
     color: hsl(0, 0%, 0%);
     text-align: center;
     padding: 20px;
