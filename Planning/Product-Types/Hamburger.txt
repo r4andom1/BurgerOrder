@@ -54,6 +54,35 @@ toppings: bacon, cheddar, avocado
 topping-sauce: mayonnaise
 }
 
+
+Meat menu:
+
+Meatylicious
+{
+bread: Potato bread
+meat: beef
+toppings: tomato
+topping-sauce: ketchup
+}
+
+Big juicy burger
+{
+bread: Potato bread
+meat: beef
+toppings: salad
+topping-sauce: ketchup
+}
+
+Jumbo dumbo burger
+{
+bread: Potato bread
+meat: beef
+toppings: yellow onion
+topping-sauce: ketchup
+}
+
+Vegan menu:
+
 Planteraburger
 {
 bread: glutenfree bread
