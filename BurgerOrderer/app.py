@@ -37,6 +37,18 @@ def order_completed_page():
     """ Order completed page """
     return render_template("order-completed.html")
 
+@app.route("/info/product/<product_id>")
+def product_info(product_id):
+    """ Product info page """
+    product = db_fetch.fetch_product(product_id)
+    return render_template("product-info.html", product=product)
+
+@app.route("/info/menu/<menu_id>")
+def menu_info(menu_id):
+    """ Menu info page """
+    menu = db_fetch.fetch_menu(menu_id)
+    return render_template("menu-info.html", menu=menu)
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=8000)
 
