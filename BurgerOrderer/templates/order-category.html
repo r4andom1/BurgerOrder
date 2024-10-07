@@ -3,37 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='order-specific.css') }}"> 
-    <title>Meat menu</title>
+    <link rel="stylesheet" href="../static/order-specific.css"> 
+    <title>Menu</title>
 
 </head>
 
 
 <body>
-    <h1>Meat menus!</h1>
+    <h1>{{ category }}</h1>
     <p><a href="/order">Go Back</a></p>
 
-    <div class="meat-menus">
-        
-        <div class="item">
-            <p>Temporary</p>
-            <div>+</div>
-        </div>
-
-        <div class="item">
-            <p>Temporary</p>
-            <div>+</div>
-        </div>
-        
-        <div class="item">
-            <p>Temporary</p>
-            <div>+</div>
-        </div>
-
-        <div class="item">
-            <p>Temporary</p>
-            <div>+</div>
-        </div>
+    <div class="category-menus">
+        {{ items|safe }}
     </div>
 </body>
 </html>

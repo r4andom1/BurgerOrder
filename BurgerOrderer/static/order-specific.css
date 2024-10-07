@@ -21,14 +21,14 @@ body {
     }
 
     
-    .meat-menus > div {
+    .category-menus > div {
         background-color: #f1f1f1;
     
         font-size: 28px;
         width: 300px;
         }
 
-    .meat-menus {
+    .category-menus {
         display: flex;
         flex-wrap: wrap;
         

@@ -24,10 +24,12 @@ def order_page():
     return render_template("order-page.html")
 
 
-@app.route("/order/category")
-def order_meat():
+@app.route("/order/<category>", methods=['get'])
+def order_category(category):
     """ Menu choice page """
-    return render_template("order-category.html")
+
+    items = db_fetch.fetch_category(category)
+    return render_template("order-category.html", category=category, items=items)
 
 
 @app.route("/order-completed")
