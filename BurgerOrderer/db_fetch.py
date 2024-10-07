@@ -48,25 +48,38 @@ def fetch_category(category):
                 FROM products p
                 JOIN product_toppings pt ON p.product_id = pt.product_id
                 JOIN toppings t ON pt.topping_id = t.topping_id
-                WHERE t.name ILIKE %s
+                WHERE t.name ILIKE %s ORDER BY name
             """, (category,))
+
+            items = cursor.fetchall()
+
+            items_html = ""
+            for item in items:
+                items_html += (
+                    f"<div class='item' data-id='{item[0]}' "
+                    f"onclick=\"location.href='/info/product/{item[0]}';\"><p>{item[1]}</p><div>+</div></div>"
+                )
         else:
             cursor.execute("""
-                SELECT product_id, name
-                FROM products
-                WHERE product_type = %s
+                SELECT product_id, name, quantity, rpq.description
+                FROM products p
+                JOIN ref_product_quantities rpq ON p.quantity_unit = rpq.quantity_unit
+                WHERE product_type = %s ORDER BY name, quantity
             """, (category_map.get(category),))
 
+            items = cursor.fetchall()
 
-        items = cursor.fetchall()
-        print(items)
+            items_html = ""
+            for item in items:
+                items_html += (
+                    f"<div class='item' data-id='{item[0]}' "
+                    f"onclick=\"location.href='/info/product/{item[0]}';\"><p>{item[1]} {item[2]} {item[3]}</p><div>+</div></div>"
+                )
 
-        items_html = ""
-        for item in items:
-            items_html += (
-                f"<div class='item' data-id='{item[0]}' "
-                f"onclick=\"location.href='/info/product/{item[0]}';\"><p>{item[1]}</p><div>+</div></div>"
-            )
+
+     
+
+        
             
         return items_html
     except Exception as e:
