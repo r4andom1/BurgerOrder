@@ -103,6 +103,6 @@ for me with .jsx making javascript and html work together better than i feel lik
 since Python web dev isnt exactly the standard, i also think php has better integration with html but php is a different beast 
 and works very close with html. Its interesting reflecting over the different technologies and what they are strong contra weak at. 
 With python web dev you get the benefits of python but javascript / typescript still has a smoother overall experience in my humble 
-opinion, the quirks with js can be painful but dont appear too often. You could do a Flask API if youd like with a REACT 
+opinion, the quirks with js can be painful but dont appear too often. You could do a Flask API & backend if youd like with a REACT 
 frontend but Node just keeps getting better, i would still prefer to only use flask for backend though if i had to use it. Maybe
 my opinion changes after this project but i doubt it.
