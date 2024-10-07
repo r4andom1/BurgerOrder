@@ -3,9 +3,9 @@
 --
 
 -- Dumped from database version 16.4
--- Dumped by pg_dump version 16.4
+-- Dumped by pg_dump version 16.3
 
--- Started on 2024-10-01 11:10:17 CEST
+-- Started on 2024-10-07 14:04:59
 
 CREATE ROLE postgres LOGIN;
 
@@ -25,7 +25,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- TOC entry 226 (class 1259 OID 16458)
+-- TOC entry 215 (class 1259 OID 16451)
 -- Name: menu_items; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -38,7 +38,7 @@ CREATE TABLE public.menu_items (
 ALTER TABLE public.menu_items OWNER TO postgres;
 
 --
--- TOC entry 219 (class 1259 OID 16425)
+-- TOC entry 216 (class 1259 OID 16454)
 -- Name: menus; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -53,7 +53,7 @@ CREATE TABLE public.menus (
 ALTER TABLE public.menus OWNER TO postgres;
 
 --
--- TOC entry 220 (class 1259 OID 16428)
+-- TOC entry 217 (class 1259 OID 16459)
 -- Name: menus_menu_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -69,8 +69,8 @@ CREATE SEQUENCE public.menus_menu_id_seq
 ALTER SEQUENCE public.menus_menu_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3653 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 4898 (class 0 OID 0)
+-- Dependencies: 217
 -- Name: menus_menu_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -78,7 +78,7 @@ ALTER SEQUENCE public.menus_menu_id_seq OWNED BY public.menus.menu_id;
 
 
 --
--- TOC entry 225 (class 1259 OID 16455)
+-- TOC entry 218 (class 1259 OID 16460)
 -- Name: product_toppings; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -91,7 +91,7 @@ CREATE TABLE public.product_toppings (
 ALTER TABLE public.product_toppings OWNER TO postgres;
 
 --
--- TOC entry 216 (class 1259 OID 16400)
+-- TOC entry 219 (class 1259 OID 16463)
 -- Name: products; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -109,7 +109,7 @@ CREATE TABLE public.products (
 ALTER TABLE public.products OWNER TO postgres;
 
 --
--- TOC entry 215 (class 1259 OID 16399)
+-- TOC entry 220 (class 1259 OID 16468)
 -- Name: products_product_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -125,8 +125,8 @@ CREATE SEQUENCE public.products_product_id_seq
 ALTER SEQUENCE public.products_product_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3654 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 4899 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: products_product_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -134,7 +134,7 @@ ALTER SEQUENCE public.products_product_id_seq OWNED BY public.products.product_i
 
 
 --
--- TOC entry 227 (class 1259 OID 16462)
+-- TOC entry 221 (class 1259 OID 16469)
 -- Name: ref_product_quantities; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -147,7 +147,7 @@ CREATE TABLE public.ref_product_quantities (
 ALTER TABLE public.ref_product_quantities OWNER TO postgres;
 
 --
--- TOC entry 218 (class 1259 OID 16409)
+-- TOC entry 222 (class 1259 OID 16472)
 -- Name: ref_product_type; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -160,7 +160,7 @@ CREATE TABLE public.ref_product_type (
 ALTER TABLE public.ref_product_type OWNER TO postgres;
 
 --
--- TOC entry 217 (class 1259 OID 16408)
+-- TOC entry 223 (class 1259 OID 16477)
 -- Name: ref_produt_type_product_type_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -176,8 +176,8 @@ CREATE SEQUENCE public.ref_produt_type_product_type_id_seq
 ALTER SEQUENCE public.ref_produt_type_product_type_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3655 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 4900 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: ref_produt_type_product_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -185,7 +185,7 @@ ALTER SEQUENCE public.ref_produt_type_product_type_id_seq OWNED BY public.ref_pr
 
 
 --
--- TOC entry 224 (class 1259 OID 16447)
+-- TOC entry 224 (class 1259 OID 16478)
 -- Name: ref_topping_type; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -198,7 +198,7 @@ CREATE TABLE public.ref_topping_type (
 ALTER TABLE public.ref_topping_type OWNER TO postgres;
 
 --
--- TOC entry 223 (class 1259 OID 16446)
+-- TOC entry 225 (class 1259 OID 16483)
 -- Name: ref_topping_type_topping_type_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -214,8 +214,8 @@ CREATE SEQUENCE public.ref_topping_type_topping_type_id_seq
 ALTER SEQUENCE public.ref_topping_type_topping_type_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3656 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 4901 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: ref_topping_type_topping_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -223,7 +223,7 @@ ALTER SEQUENCE public.ref_topping_type_topping_type_id_seq OWNED BY public.ref_t
 
 
 --
--- TOC entry 222 (class 1259 OID 16438)
+-- TOC entry 226 (class 1259 OID 16484)
 -- Name: toppings; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -239,7 +239,7 @@ CREATE TABLE public.toppings (
 ALTER TABLE public.toppings OWNER TO postgres;
 
 --
--- TOC entry 221 (class 1259 OID 16437)
+-- TOC entry 227 (class 1259 OID 16489)
 -- Name: toppings_topping_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -255,8 +255,8 @@ CREATE SEQUENCE public.toppings_topping_id_seq
 ALTER SEQUENCE public.toppings_topping_id_seq OWNER TO postgres;
 
 --
--- TOC entry 3657 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 4902 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: toppings_topping_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -264,7 +264,7 @@ ALTER SEQUENCE public.toppings_topping_id_seq OWNED BY public.toppings.topping_i
 
 
 --
--- TOC entry 3477 (class 2604 OID 16429)
+-- TOC entry 4720 (class 2604 OID 16490)
 -- Name: menus menu_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -272,7 +272,7 @@ ALTER TABLE ONLY public.menus ALTER COLUMN menu_id SET DEFAULT nextval('public.m
 
 
 --
--- TOC entry 3475 (class 2604 OID 16403)
+-- TOC entry 4721 (class 2604 OID 16491)
 -- Name: products product_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -280,7 +280,7 @@ ALTER TABLE ONLY public.products ALTER COLUMN product_id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 3476 (class 2604 OID 16412)
+-- TOC entry 4722 (class 2604 OID 16492)
 -- Name: ref_product_type product_type_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -288,7 +288,7 @@ ALTER TABLE ONLY public.ref_product_type ALTER COLUMN product_type_id SET DEFAUL
 
 
 --
--- TOC entry 3479 (class 2604 OID 16450)
+-- TOC entry 4723 (class 2604 OID 16493)
 -- Name: ref_topping_type topping_type_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -296,7 +296,7 @@ ALTER TABLE ONLY public.ref_topping_type ALTER COLUMN topping_type_id SET DEFAUL
 
 
 --
--- TOC entry 3478 (class 2604 OID 16441)
+-- TOC entry 4724 (class 2604 OID 16494)
 -- Name: toppings topping_id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -304,26 +304,12 @@ ALTER TABLE ONLY public.toppings ALTER COLUMN topping_id SET DEFAULT nextval('pu
 
 
 --
--- TOC entry 3646 (class 0 OID 16458)
--- Dependencies: 226
+-- TOC entry 4880 (class 0 OID 16451)
+-- Dependencies: 215
 -- Data for Name: menu_items; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
 COPY public.menu_items (product_id, menu_id) FROM stdin;
-1	1
-38	1
-22	1
-27	1
-2	2
-38	2
-51	2
-57	2
-30	2
-31	2
-3	3
-38	3
-22	3
-35	3
 7	4
 38	4
 22	4
@@ -362,12 +348,26 @@ COPY public.menu_items (product_id, menu_id) FROM stdin;
 13	12
 31	12
 31	12
+58	1
+38	1
+22	1
+27	1
+59	2
+38	2
+51	2
+57	2
+30	2
+31	2
+60	3
+38	3
+22	3
+35	3
 \.
 
 
 --
--- TOC entry 3639 (class 0 OID 16425)
--- Dependencies: 219
+-- TOC entry 4881 (class 0 OID 16454)
+-- Dependencies: 216
 -- Data for Name: menus; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -388,8 +388,8 @@ COPY public.menus (menu_id, name, description, price) FROM stdin;
 
 
 --
--- TOC entry 3645 (class 0 OID 16455)
--- Dependencies: 225
+-- TOC entry 4883 (class 0 OID 16460)
+-- Dependencies: 218
 -- Data for Name: product_toppings; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -451,12 +451,24 @@ COPY public.product_toppings (product_id, topping_id) FROM stdin;
 9	19
 9	10
 9	27
+58	2
+58	6
+58	19
+58	22
+59	2
+59	6
+59	18
+59	22
+60	2
+60	6
+60	14
+60	22
 \.
 
 
 --
--- TOC entry 3636 (class 0 OID 16400)
--- Dependencies: 216
+-- TOC entry 4884 (class 0 OID 16463)
+-- Dependencies: 219
 -- Data for Name: products; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -518,12 +530,15 @@ COPY public.products (product_id, product_type, name, description, price, quanti
 21	2	Matcha Tea	High quality matcha tea.	1.99	25	2
 49	2	Matcha Tea	High quality matcha tea.	2.49	35	2
 50	2	Matcha Tea	High quality matcha tea.	3.99	50	2
+58	1	Meatylicious	So meaty...	3.99	1	1
+59	1	Big Juicy Burger	A big, juicy delight!	7.99	1	1
+60	1	Jumbo Dumbo Burger	A huge, tasty burger!	6.99	1	1
 \.
 
 
 --
--- TOC entry 3647 (class 0 OID 16462)
--- Dependencies: 227
+-- TOC entry 4886 (class 0 OID 16469)
+-- Dependencies: 221
 -- Data for Name: ref_product_quantities; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -535,8 +550,8 @@ COPY public.ref_product_quantities (quantity_unit, description) FROM stdin;
 
 
 --
--- TOC entry 3638 (class 0 OID 16409)
--- Dependencies: 218
+-- TOC entry 4887 (class 0 OID 16472)
+-- Dependencies: 222
 -- Data for Name: ref_product_type; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -548,7 +563,7 @@ COPY public.ref_product_type (product_type_id, description) FROM stdin;
 
 
 --
--- TOC entry 3644 (class 0 OID 16447)
+-- TOC entry 4889 (class 0 OID 16478)
 -- Dependencies: 224
 -- Data for Name: ref_topping_type; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -562,8 +577,8 @@ COPY public.ref_topping_type (topping_type_id, description) FROM stdin;
 
 
 --
--- TOC entry 3642 (class 0 OID 16438)
--- Dependencies: 222
+-- TOC entry 4891 (class 0 OID 16484)
+-- Dependencies: 226
 -- Data for Name: toppings; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -602,8 +617,8 @@ COPY public.toppings (topping_id, name, description, price, topping_type) FROM s
 
 
 --
--- TOC entry 3658 (class 0 OID 0)
--- Dependencies: 220
+-- TOC entry 4903 (class 0 OID 0)
+-- Dependencies: 217
 -- Name: menus_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -611,17 +626,17 @@ SELECT pg_catalog.setval('public.menus_menu_id_seq', 12, true);
 
 
 --
--- TOC entry 3659 (class 0 OID 0)
--- Dependencies: 215
+-- TOC entry 4904 (class 0 OID 0)
+-- Dependencies: 220
 -- Name: products_product_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.products_product_id_seq', 71, true);
+SELECT pg_catalog.setval('public.products_product_id_seq', 74, true);
 
 
 --
--- TOC entry 3660 (class 0 OID 0)
--- Dependencies: 217
+-- TOC entry 4905 (class 0 OID 0)
+-- Dependencies: 223
 -- Name: ref_produt_type_product_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -629,8 +644,8 @@ SELECT pg_catalog.setval('public.ref_produt_type_product_type_id_seq', 4, true);
 
 
 --
--- TOC entry 3661 (class 0 OID 0)
--- Dependencies: 223
+-- TOC entry 4906 (class 0 OID 0)
+-- Dependencies: 225
 -- Name: ref_topping_type_topping_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -638,8 +653,8 @@ SELECT pg_catalog.setval('public.ref_topping_type_topping_type_id_seq', 4, true)
 
 
 --
--- TOC entry 3662 (class 0 OID 0)
--- Dependencies: 221
+-- TOC entry 4907 (class 0 OID 0)
+-- Dependencies: 227
 -- Name: toppings_topping_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -647,7 +662,7 @@ SELECT pg_catalog.setval('public.toppings_topping_id_seq', 30, true);
 
 
 --
--- TOC entry 3486 (class 2606 OID 16436)
+-- TOC entry 4726 (class 2606 OID 16496)
 -- Name: menus menus_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -656,7 +671,7 @@ ALTER TABLE ONLY public.menus
 
 
 --
--- TOC entry 3482 (class 2606 OID 16407)
+-- TOC entry 4729 (class 2606 OID 16498)
 -- Name: products products_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -665,7 +680,7 @@ ALTER TABLE ONLY public.products
 
 
 --
--- TOC entry 3484 (class 2606 OID 16418)
+-- TOC entry 4731 (class 2606 OID 16500)
 -- Name: ref_product_type ref_product_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -674,7 +689,7 @@ ALTER TABLE ONLY public.ref_product_type
 
 
 --
--- TOC entry 3490 (class 2606 OID 16454)
+-- TOC entry 4733 (class 2606 OID 16502)
 -- Name: ref_topping_type ref_topping_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -683,7 +698,7 @@ ALTER TABLE ONLY public.ref_topping_type
 
 
 --
--- TOC entry 3488 (class 2606 OID 16445)
+-- TOC entry 4735 (class 2606 OID 16504)
 -- Name: toppings toppings_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -692,7 +707,7 @@ ALTER TABLE ONLY public.toppings
 
 
 --
--- TOC entry 3480 (class 1259 OID 16424)
+-- TOC entry 4727 (class 1259 OID 16505)
 -- Name: fki_o; Type: INDEX; Schema: public; Owner: postgres
 --
 
@@ -700,7 +715,7 @@ CREATE INDEX fki_o ON public.products USING btree (product_type);
 
 
 --
--- TOC entry 3491 (class 2606 OID 16419)
+-- TOC entry 4736 (class 2606 OID 16506)
 -- Name: products product_type_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -708,7 +723,7 @@ ALTER TABLE ONLY public.products
     ADD CONSTRAINT product_type_fkey FOREIGN KEY (product_type) REFERENCES public.ref_product_type(product_type_id) NOT VALID;
 
 
--- Completed on 2024-10-01 11:10:17 CEST
+-- Completed on 2024-10-07 14:04:59
 
 --
 -- PostgreSQL database dump complete
