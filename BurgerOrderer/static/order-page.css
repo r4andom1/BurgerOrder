@@ -4,12 +4,13 @@
 * {
 
     text-align: center;
-    border: 1px solid hsl(0, 100%, 50%);
+    /*border: 1px solid hsl(0, 100%, 50%);*/
     font-size: 1.2em;
     color: hsl(0, 5%, 12%);
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: monospace;
 }
 
 body {
@@ -31,9 +32,9 @@ h1 {
 .flex-container {
     display: flex;
     flex-direction: row;
-    width: 60vw;
+    width: 40vw;
     flex-wrap: wrap;
-
+    gap: 1px;
 }
 
 .flex-wrapper {
@@ -43,19 +44,27 @@ h1 {
 }
 
 .flex-container a {
-    flex: 1 0 33.33%;
+    flex: 1 0 33%;
     aspect-ratio: 1/1;
-    border: 5px solid green;
+    /*border: 5px solid green;*/
+    border: 1px solid black;
 }
 
-.catagory { /* Ändrar innehållet INUTI flex-container*/
+.flex-container .wide {
+    flex: 1 0 100%;
+    aspect-ratio: 16/5;
+}
+
+
+
+.category { /* Ändrar innehållet INUTI flex-container*/
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 a {
-    color: hsl(211, 100%, 50%);
+    color: hsl(0, 0%, 0%);
     text-decoration: none;
     text-align: center;
 }

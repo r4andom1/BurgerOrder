@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap');
 
-*{border: 1px solid rgb(0, 0, 0);
-margin: 0;
-padding: 0;
+*{
+    /*border: 1px solid rgb(0, 0, 0);*/
+    margin: 0;
+    padding: 0;
 } 
 body {
     font-family: monospace, sans-serif;
@@ -11,45 +12,50 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+
+}
+
+h1 {
+
+    font-size: 2fr;
+
+}
+
+
+.category-menus > div {
+    background-color: #f1f1f1;
+
+    font-size: 28px;
+    width: 300px;
     
-    }
+}
 
-    h1 {
-
-        font-size: 2fr;
-
-    }
-
+.category-menus {
+    display: flex;
+    flex-wrap: wrap;
     
-    .category-menus > div {
-        background-color: #f1f1f1;
-    
-        font-size: 28px;
-        width: 300px;
-        }
+    justify-content: space-around;
+    align-items:center;
+    gap: 50px;
 
-    .category-menus {
-        display: flex;
-        flex-wrap: wrap;
-        
-        justify-content: space-around;
-        align-items:center;
-        gap: 50px;
-    
-    }
+}
 
-    .item {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 15px 0;
-        cursor: pointer;
-    }
+.item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
+    border: 1px solid black;
+}
 
-    .item p {
-        width: 250px;
-        text-align: left;
-        font-size: 1.5rem;
-        padding-left: 10px;
-    }
+.item p {
+    width: 250px;
+    text-align: left;
+    font-size: 1.5rem;
+    padding-left: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
     
+}
