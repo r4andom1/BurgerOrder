@@ -1,16 +1,18 @@
 import pytest
+from BurgerOrderer import create_app, db
+from BurgerOrderer.config import __init__ 
 
-from BurgerOrderer import app, db
-
-pytest.fixture()
+@pytest.fixture(scope="module")
 def test_app():
-    app = app("sqlite://")
-
+    """Fixture for creating the Flask app with the TestingConfig"""
+    app = create_app(__init__)
     with app.app_context():
-        db.create_all()
+        yield app
 
-    yield app
-
-@pytest.fixture()
-def client(app):
-    return app.test_client()
+@pytest.fixture(scope="module")
+def test_database(test_app):
+    """Fixture for setting up the test database"""
+    db.create_all()  # Create tables
+    yield db
+    db.session.remove()
+    db.drop_all()  # Clean up after test
