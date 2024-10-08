@@ -1,3 +1,17 @@
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+
+db = SQLAlchemy() # db intitialized here
+app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "menustore.sql"
+db.init_app(app)
+
+
+
+
+
+
 # tests/test_routes.py
 def test_front_page(test_app):
     client = test_app.test_client()
