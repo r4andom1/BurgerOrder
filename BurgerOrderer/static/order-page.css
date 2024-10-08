@@ -20,7 +20,7 @@ body {
     color: #212529;
 }
 
-h1 {
+.top {
     color: hsl(0, 0%, 0%);
     text-align: center;
     padding: 20px;
@@ -35,11 +35,14 @@ h1 {
     width: 40vw;
     flex-wrap: wrap;
     gap: 1px;
+    min-width: 620px;
 }
 
 .flex-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
+    
     
 }
 
@@ -48,6 +51,7 @@ h1 {
     aspect-ratio: 1/1;
     /*border: 5px solid green;*/
     border: 1px solid black;
+
 }
 
 .flex-container .wide {

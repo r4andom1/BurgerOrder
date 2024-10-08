@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/order-specific.css"> 
+    <link rel="stylesheet" href="../static/cart.css">
+    <link rel="stylesheet" href="../static/order-page.css">
     <title>Menu</title>
 
 </head>
 
 
 <body>
-    <h1>{{ category }}</h1>
+    <h1 class="top">{{ category }}</h1>
     <p><a href="/order">Go Back</a></p>
 
-    <div class="category-menus">
-        {{ items|safe }}
-    </div>
+    <main>
+        <div class="category-menus">
+            {{ items|safe }}
+        </div>
+    
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-items">
+                <p>{{ order_summary|safe }}</p>
+            </div>
+       
+            <div class="order-info-bottom">
+                <p class="cart-total">Total: ${{ total }}</p>
+                <a href="/order-completed">Modify & Order</a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
