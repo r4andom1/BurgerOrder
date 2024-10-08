@@ -8,7 +8,7 @@ import os
 
 app = Flask(__name__)
 
-order_dict = {
+order_dict = { # Test dictionary to test sending order to kichenview
     "name": "big_burger",
     "quantity": 2,
     "price": 25,
@@ -18,7 +18,6 @@ order_dict = {
 @app.route("/toppings")
 def toppings():
     """ Toppings test page """
-
     toppings_html = db_fetch.fetch_topping_html()
     return render_template("toppings.html", toppings_list=toppings_html)
 
@@ -35,7 +34,6 @@ def order_page():
 @app.route("/order/<category>", methods=['get'])
 def order_category(category):
     """ Menu choice page """
-
     items = db_fetch.fetch_category(category)
     return render_template("order-category.html", category=category, items=items)
 
