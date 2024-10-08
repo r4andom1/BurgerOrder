@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+}
+
+h1 {
+    color: hsl(0, 0%, 0%);
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid hsl(0, 0%, 0%);
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 3rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #495057;
+}
+
+.order-button {
+    border: none;
+    color: green;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 8px 45%;
+    cursor: pointer;
+    background-color: hsl(120, 82%, 48%);
+}
+.order-button:hover {
+    background-color: #c0baba;
+    color: hsl(120, 50%, 44%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+.container > p > a:hover {
+    text-decoration: underline;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    text-align: center;
+}

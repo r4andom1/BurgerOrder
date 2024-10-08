@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+* {
+
+    text-align: center;
+    /*border: 1px solid hsl(0, 100%, 50%);*/
+    font-size: 1.2em;
+    color: hsl(0, 5%, 12%);
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+}
+
+.top {
+    color: hsl(0, 0%, 0%);
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid hsl(0, 0%, 0%);
+    font-family: 'Protest Guerrilla', sans-serif;
+    font-size: 3rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    flex-wrap: wrap;
+    gap: 1px;
+    min-width: 620px;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.flex-container a {
+    flex: 1 0 33%;
+    aspect-ratio: 1/1;
+    /*border: 5px solid green;*/
+    border: 1px solid black;
+
+}
+
+.flex-container .wide {
+    flex: 1 0 100%;
+    aspect-ratio: 16/5;
+}
+
+
+
+.category { /* Ändrar innehållet INUTI flex-container*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    text-align: center;
+}
+
+a:hover {
+    color: hsl(211, 56%, 32%);
+}
