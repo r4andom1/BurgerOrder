@@ -2,8 +2,6 @@
 from flask import Flask, render_template
 from db import connect
 import db_fetch
-
-
 app = Flask(__name__)
 
 @app.route("/toppings")
