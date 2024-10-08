@@ -52,3 +52,57 @@ this issue and try to improve the database structure in general to be optimized.
 the database structure. Today we have also finished all the different items like menues and what the burgers contain in terms of 
 toppings / what menues contain in terms of sides, drinks etc. Now i have all the data that should be pushed into the database so i 
 can do that when i have more of a prototype. 
+
+-
+
+Somewhere between the last and the commit after this one....
+
+We got together in a group room and got everyone in the loop of what our thoughts were and what we were going to do.
+I also presented the database, how the tables work and how it can be used. I drew a database schema that further
+shows the relation between tables even though the many to one etc lines are not correct it gives a rough idea of what 
+id in this table is the same as that id in another table. An .sql file was also exported and put into the git repo,
+i also showed the group how it can be imported into pgadmin so everyone can play around with queries and such.
+
+26-09
+Today we had a laboration on Docker. I have learned the basic pillars of Docker and watched some other tutorials to better understand fundamentals. 
+I feel like ive grasped the functionality of a Dockerfile, image, container and volumes. Ive also learned some basic docker commands and how you can 
+build a docker file with remapping ports etc. I understand how the functionality of docker is wanted today and i also feel like docker is kind of like git. 
+The basics are easy but the possibilities are endless, especially when you introduce things like Kubernetes. Ill continue to learn and try to make it work by myself as 
+learning by doing seems like a good choice with Docker.
+
+
+02-10
+Today we dcokerized the databased. Seeing as it was already finished we thought it would be a good test subject. It was not as easy as we first thought.
+Eventually we had a working dockerfile and i also added an instructions file that contains the commands to build the image and the container. This will
+in the future go into a compose file so its even easier. At first i had some issues importing the database, but after reading the log file of the container
+it was quite clear what the issue was so a quick google solved it. To verify it actually worked i also tried connecting to the db in the container using psql
+in the terminal. After verifiying all tables were there we were good to go. Everyone also tried installing the image and run the container and to no suprise 
+docker works as it should for everyone  :) The next step would be for us to connect to the database! I have done this with both js and php in the past so i doubt we 
+will have any issues doing it with python, but who knows!
+
+04-10
+Today we managed to connect to the database with python psycopg2, i made an example site that fetches all toppings from the db and builds up some html thats
+in turn passed into a html template so we will still have great utilization of the template feature. I also realize now how nice it is to have a drawn database
+schema because all the column names and table names are listed so you can easily write SQL queries without having to open pgadmin or such. The container port
+is also remapped so 5432 in the container is 5433 outside since 5432 is the pg service port and i dont want the db to not work just because someone is running
+a postgres service on their pc, then its just better to use a free port instead and it works great as long as you specify the port when connecting to the db
+
+07-10
+Today we made the db fetch the correct items when looking at what to order, ex only picking chicken items or 
+drinks etc. Also added the skeleton for a cart system, only the html css, functionality is the next step there.
+We made a new endpoint info/product/<product_id> That can be used to search up the info on a given product, a similair one 
+info/menu/<menu_id> has been laid out but hasnt been made functional yet. Next step is to get some unit tests going, get a cart 
+system and a way to modify orders. I have some worries with how its going to work with the cart since products and menus are stored 
+differently in different tables but its easy to think something is a problem but when you start trying to implement it turns out it 
+wasnt that bad. Menus just contain products in the end so it is definitely doable. The testing is taking shape, its the first time 
+we have all done any kind of unit testing, but we have brain stormed a bit on what should be tested, ex the routes, the db 
+connection etc. Overall a productive day, I've also noticed how similiar it is to build a basic api with Flask contra node & 
+express, just slightly different syntax. Flask has html templates but taking dynamic data into templates are done 
+kind of roughly in my opinion and in turn promotes building more html in python which can get messy fast, thats where react shines 
+for me with .jsx making javascript and html work together better than i feel like it does with Flask. But thats to be expected 
+since Python web dev isnt exactly the standard, i also think php has better integration with html but php is a different beast 
+and works very close with html. Its interesting reflecting over the different technologies and what they are strong contra weak at. 
+With python web dev you get the benefits of python but javascript / typescript still has a smoother overall experience in my humble 
+opinion, the quirks with js can be painful but dont appear too often. You could do a Flask API & backend if youd like with a REACT 
+frontend but Node just keeps getting better, i would still prefer to only use flask for backend though if i had to use it. Maybe
+my opinion changes after this project but i doubt it.

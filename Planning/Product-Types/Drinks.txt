@@ -17,6 +17,11 @@ Fanta exotic: 33cl, 50cl, 70cl
 Cola Zero: 33cl, 50cl, 70cl
 Trocadero: 33cl 50cl 70cl
 
+
+small = 25cl
+medium = 35cl
+large = 50cl
+
 Hot drink:
 Tea: small, medium, large
 Coffee: small, medium, large

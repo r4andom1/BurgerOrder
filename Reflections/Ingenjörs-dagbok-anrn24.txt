@@ -4,6 +4,8 @@ Efter introduktionen på kursen så bildade jag och 3 andra en grupp som nu fram
 Vi tog tillfället och satte oss ner efter föreläsningen och tittade igenom hela uppgiften.
 Gruppen konstaterade snabbt att det var väldigt mycket nya tekniker som kommer bli intressanta att titta vidare på senare i kursen.
 
+------------------------------------------------------------------------------------------------------------------
+
 2024-09-04:
 Alla deltagare i gruppen möttes upp för att sätta sig ner och hjälpas åt med installationer av de olika programmen och försöka få ett hum om vad de  
 olika programmen är till för och hur de ska nyttjas. 
@@ -11,16 +13,22 @@ Efter mötet så var det dags för den andra föreläsningen för kursen. Efter 
 mycket som tas 
 upp är förkortningar och spännande program som man aldrig hört talas om, men med tid så kommer jag förstå allt, det är jag övertygad om! 
 
+------------------------------------------------------------------------------------------------------------------
+
 2024-09-05
 Idag var det laboration. Gruppen satte sig tillsammans i anvisat klassrum och påbörjade med övningsuppgifter. Laddat ner inteljj då jag missade att  
 göra det igår, men har inte börjat med att 
 försöka bemästra det. Jag tänker nog att jag kommer köra med vs code istället då jag nyttjar det i den andra kursen jag går samtidigt. Jag valde     
 istället att försöka lära mig grunderna med github. 
 Testat funktioner som push, pull, branch, merge och fork, det har gått bra. 
-   
+
+------------------------------------------------------------------------------------------------------------------
+
 2024-09-11
 Today we had a lecture that focused on debugging and troubleshooting. One thing I picked up from the lecture was the so called 5S which I feel is a  
 good structure to build your foundation on when it comes to work quality and such. I will surely keep 5S in mind while working in the future
+
+------------------------------------------------------------------------------------------------------------------
 
 2024-09-12
 Today I went to the lab-enviroment with my group and started with the excercises that revolved around testing and debugging. As I´m writing this     
@@ -28,6 +36,8 @@ I´ve been stuck on the excercise 4.6 which i had to debug a language (Java) tha
 changing one small thing, < to >. My insight for this excercise was that I should put my effort to study the things that are relevant for the time 
 being and not try to dive in to languages I don´t understand yet. Doing python-course in parallel to this course so python will be my focus of 
 language, but what language we will be coding in will be up for debate with the group. 
+
+------------------------------------------------------------------------------------------------------------------
 
 2024-09-17
 Since last time writing in the diary not much has happened specifically on the course, until today. The day started with a lecture about the      
@@ -45,5 +55,38 @@ html and css for the site. Docker will be used as well but later on.
 I feel good after this day, I feel like even though I don't have great knowledge in this field I feel confident that I will grow alot in this field. 
 My focus will be on learning tha new tools and try to include myself in all the small parts in the project that is to come. 
 
-I feel good!
+------------------------------------------------------------------------------------------------------------------
+
+2024-09-26
+Today I took a deeper dive into docker and went on to learn about the basics about it. 
+I used the excercise document as well as dockers own guides and introduction 
+tutorials how to use docker and the basic explanation of it. It's a cool concept. 
+Before this program I've worked a little bit with vm and the fact it takes a whole lot quicker to startup a docker 
+than a vm is amazing, that was one frustrating part with vm for me. 
+If anything, I will in the future try to implement using docker over vm because of the startup time aswell as the simplistic nature of docker.
+
+------------------------------------------------------------------------------------------------------------------
+
+2024-10-01
+Today I went to another lecture with the group and afterwards we sat down and worked on the project.
+I've done commmits before in the project, but today I made my first code commit which felt really nice. 
+It was a commit where i implemented a route in app.py which led to an html-site which I made. 
+I also used css to make the html site a lot better. It's my first time using both html and css, so i'm happy about the outcome of it. 
+I struggled a little bit in the beginning
+but I got a tip from a friend to watch some videos on the html and css topic, so I did. 
+
+------------------------------------------------------------------------------------------------------------------
+
+2024-10-04
+Today me and 2 others from the group went to the lab and started working on the exercises. 
+We came to the conclusion fast that it was a little vague with how to proceed with the excercises, so we went our own
+way to watch some other tutorials about DB's and how to import a DB into docker. 
+For me, this feels like a jungle with alot of code that I just insert and then it runs. 
+Sometimes its just good to just do that, but for me, I wanna know
+exactly what each component does in the code. 
+It's a struggle i've had through this course because alot that has been represented to us 
+is in a language I don't know, I only just begun learning python.
+I must say though, in the beginning it was alot worse, but now when we're 
+going through some code in other languages I see the resemblance in it by knowing a bit more about python. 
+
 

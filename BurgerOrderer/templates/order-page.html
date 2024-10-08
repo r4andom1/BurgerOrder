@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='order-page.css') }}"> 
+    <link rel="stylesheet" href="../static/cart.css">
+    <title>Order Something!</title>
+</head>
+<body>
+    <h1 class="top">Order Something!</h1>
+    <p><a href="/">Go Back</a></p>
+    <main>
+        <div class="flex-wrapper">
+            <div class="flex-container">
+                <a href="order/beef" class="category">Meat</a>
+                <a href="order/chicken" class="category">Chicken</a>
+                <a href="order/fish" class="category">Fish</a>
+                <a href="order/plant-based" class="category">Vegan</a>
+                <a href="order/sides" class="category">Sides</a>
+                <a href="order/drinks" class="category">Drinks</a>
+                <a href="order/menus" class="category wide">Menus</a>
+            </div>
+        </div>
+    
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div class="order-items">
+                <p>{{ order_summary|safe }}</p>
+            </div>
+       
+            <div class="order-info-bottom">
+                <p class="cart-total">Total: ${{ total }}</p>
+                <a href="/order-completed">Modify & Order</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
