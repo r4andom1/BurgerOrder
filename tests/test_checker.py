@@ -6,7 +6,7 @@ from test import (
     database_test_topping_type,
     database_test_product_type
 )
-from decimal import Decimal  # Import Decimal here
+from decimal import Decimal
 
 # Define expected outputs for your tests
 expected_product = (1, 1, "Plantera Burger", "A perfect looking gluten free burger.", Decimal('7.99'), 1, 1)
