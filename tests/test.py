@@ -21,7 +21,7 @@ def database_test():
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM products")
             toppings = cursor.fetchone()
-            print(toppings)
+            print(toppings) 
         except Exception as e:
             print(f"Error executing query: {e}")
         finally:
@@ -32,6 +32,6 @@ def database_test():
 
 products_table_test = (1, 1, "Plantera Burger", "A perfect looking gluten free burger.", "Decimal('7.99')", 1, 1)
 
-
 if __name__ == "__main__":
     database_test()
+
