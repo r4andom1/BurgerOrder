@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="../static/cart.css">
     <link rel="stylesheet" href="../static/order-page.css">
     <title>Menu</title>
-
 </head>
-
 
 <body>
     <h1 class="top">{{ category }}</h1>
@@ -23,12 +21,14 @@
         <div class="order-summary">
             <h2>Order Summary</h2>
             <div class="order-items">
-                <p>{{ order_summary|safe }}</p>
+                {% for item in cart['products'] %}
+                    <p>{{ item.name }} - {{ item.quantity }}</p>
+                {% endfor %}
             </div>
-       
+            
             <div class="order-info-bottom">
-                <p class="cart-total">Total: ${{ total }}</p>
-                <a href="/order-completed">Modify & Order</a>
+                <p class="cart-total">Total: ${{ cart['total_price'] }}</p>
+                <a href="/order/modify">Modify & Order</a>
             </div>
         </div>
     </main>

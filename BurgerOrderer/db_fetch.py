@@ -1,4 +1,5 @@
 from db import connect
+from collections import Counter
 
 def fetch_topping_html():
     conn = connect()
@@ -57,7 +58,7 @@ def fetch_category(category):
             for item in items:
                 items_html += (
                     f"<div class='item' data-id='{item[0]}' "
-                    f"onclick=\"location.href='/info/product/{item[0]}';\"><p>{item[1]}</p><div>+</div></div>"
+                    f"><p onclick=\"location.href='/info/product/{item[0]}';\">{item[1]}</p><form action='/cart/add/{item[0]}' method='POST'><button type='submit'>+</button></form></div>"
                 )
         else:
             cursor.execute("""
@@ -73,13 +74,8 @@ def fetch_category(category):
             for item in items:
                 items_html += (
                     f"<div class='item' data-id='{item[0]}' "
-                    f"onclick=\"location.href='/info/product/{item[0]}';\"><p>{item[1]} {item[2]} {item[3]}</p><div>+</div></div>"
+                    f"><p onclick=\"location.href='/info/product/{item[0]}';\">{item[1]}{item[2]}{item[3]}</p><form action='/cart/add/{item[0]}' method='POST'><button type='submit'>+</button></form></div>"
                 )
-
-
-     
-
-        
             
         return items_html
     except Exception as e:
@@ -145,6 +141,7 @@ def fetch_product(product_id):
                 JOIN ref_product_quantities rpq ON p.quantity_unit = rpq.quantity_unit
                 WHERE p.product_id = %s
             """, (product_id,))
+
             product_details = cursor.fetchone()
             product_name, product_desc, product_price, product_quantity, quantity_unit_desc = product_details
 
@@ -155,19 +152,10 @@ def fetch_product(product_id):
                 f"<p>${product_price}</p>"
                 f"<p>Qty {product_quantity} {quantity_unit_desc}</p>"
             )
+
             return product_html
         except Exception as e:
             return f"Error fetching product: {e}"
         finally:
             cursor.close()
-            conn.close()
-        
-
-
-
-
-    
-    
-    
-    
-
+            conn.close()        

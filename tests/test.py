@@ -22,8 +22,8 @@ def database_test_products():
         try:
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM products")
-            toppings = cursor.fetchone()
-            print(toppings) 
+            products = cursor.fetchone()
+            return products
         except Exception as e:
             print(f"Error executing query: {e}")
         finally:
@@ -41,7 +41,7 @@ def database_test_menus():
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM menus")
             toppings = cursor.fetchone()
-            print(toppings)
+            return toppings
         except Exception as e:
             print(f"Error executing query: {e}")
         finally:
@@ -59,7 +59,7 @@ def database_test_toppings():
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM toppings")
             toppings = cursor.fetchone()
-            print(toppings)
+            return toppings
         except Exception as e:
             print(f"Error executing query: {e}")
         finally:
@@ -77,7 +77,7 @@ def database_test_topping_type():
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM ref_topping_type")
             toppings = cursor.fetchall()
-            print(toppings)
+            return toppings
         except Exception as e:
             print(f"Error executing query: {e}")
         finally:
@@ -95,7 +95,7 @@ def database_test_product_type():
             cursor = conn.cursor()
             cursor.execute("SELECT * FROM ref_product_type")
             toppings = cursor.fetchall()
-            print(toppings)
+            return toppings
         except Exception as e:
             print(f"Error executing query: {e}")
         finally:
@@ -106,11 +106,13 @@ def database_test_product_type():
 
 
 products_table_test = (1, 1, "Plantera Burger", "A perfect looking gluten free burger.", "Decimal('7.99')", 1, 1)
+menus_table_test = (1, 'Brioche', 'Soft and buttery French-style bread.', "Decimal('1.50')", 1)
+toppings_table_test = (1, 'Brioche', 'Soft and buttery French-style bread.', "Decimal('1.50')", 1)
+topping_typ_table_test = [(1, 'Bread'), (2, 'Meat'), (3, 'Topping'), (4, 'Sauce')]
+product_typ_table_test = [(1, 'burger'), (2, 'drink'), (3, 'side')]
 
 
 if __name__ == "__main__":
-    database_test()
-
     database_test_products()
     database_test_menus()
     database_test_toppings()
