@@ -2,7 +2,6 @@
 from flask import Flask, render_template, session, request, redirect
 from db import connect
 import db_fetch
-
 app = Flask(__name__)
 app.secret_key = "secretkeyverysecretkey"
 
