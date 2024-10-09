@@ -124,7 +124,7 @@ def remove_modification(product_id, topping_name):
     return redirect(referer)
 
 @app.route("/order/place", methods=['POST'])
-def place_order():
+def place_order(): # check every addons quantity. If over 1, its "extra". If zero, its "no" in the url.
     return
 
 def load_topping_data_to_cart():
@@ -219,7 +219,6 @@ def remove_from_session_cart(product_id):
             break
     calculate_total_price()
 
-
 def update_session_cart():
     #session["cart"] = db_fetch.fetch_cart(session.get("cart", []))
     return session["cart"]
@@ -235,7 +234,6 @@ def calculate_total_price():
             if modification != []:
                 total_price += float(modification["price_per"]) * (int(modification["quantity"]) - 1)
     session["cart"]["total_price"] = round(total_price, 2)
-
 
 def initialize_session_cart():
     session["cart"] = {
@@ -278,7 +276,7 @@ def render_order_page(burger_name, args):
 
 @app.route("/buy/<burger_name>", methods=["get"])
 def buy(burger_name):
-    """ should """
+    """  """
     print("Placing an order on " + burger_name)
     send_to_kitchen(burger_name, request.args)
     return render_order_page(burger_name, request.args)
