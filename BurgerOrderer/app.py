@@ -1,19 +1,19 @@
 """ BurgerOrderer"""
-from flask import Flask, render_template
-from flask import request
+from flask import Flask, render_template, request
 from db import connect
 import requests
 import db_fetch
 import os
+import json #?
 
 app = Flask(__name__)
 
-order_dict = { # Test dictionary to test sending order to kichenview
-    "name": "big_burger",
-    "quantity": 2,
-    "price": 25,
-    "modifications": []
-}
+static_burgers= [{"name":"fettburgare"},
+                {"name":"gnuttburgare"},
+                {"name":"isterburgare"}]
+
+def get_burgers():
+    return static_burgers
 
 @app.route("/toppings")
 def toppings():
@@ -57,12 +57,9 @@ def menu_info(menu_id):
 """ Everything under here is about the kitchenview connection and sending the order through """
 base_url = 'http://' + os.getenv('KITCHENVIEW_HOST', 'localhost:5000')
 
-def render_order_page(burger_name, args):
-    return "ordered " + burger_name
-
 def make_url(burger_name):
     """ builds url to kitchenview with burger name"""
-    return base_url + "/buy" + burger_name
+    return base_url + "/buy/" + burger_name
 
 def add_options(url, args):
     """
@@ -83,10 +80,14 @@ def send_to_kitchen(burger_name, args):
     requrl = add_options(requrl, args)
 
     print("Using kitchenview url: " + requrl)
-    requests.get(requrl)
-    return
+    requests.get(requrl) # Sends url to Kitchenview
+    # ex requrl: http://kitchenview:5000/buy/gnuttburgare?noOnion&extraBacon&
+    return #requrl?
 
-@app.route("/buy/<burgername>", methods=["get"])
+def render_order_page(burger_name, args):
+    return "ordered " + burger_name
+
+@app.route("/buy/<burger_name>", methods=["get"])
 def buy(burger_name):
     """ should """
     print("Placing an order on " + burger_name)
@@ -94,6 +95,6 @@ def buy(burger_name):
     return render_order_page(burger_name, request.args)
 
 if __name__ == "__main__":
-    #print(base_url)
     app.run(debug=True, host="0.0.0.0", port=8000)
+    #Using kitchenview url: http://localhost:5000/buy/big_burger?topping&
     
