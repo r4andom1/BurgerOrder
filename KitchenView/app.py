@@ -7,7 +7,7 @@ app = Flask(__name__)
 def frontpage():
     return 'Please specify a burger to buy'
 
-@app.route("/buy/<burgerName>", methods=["get"])
+@app.route("/buy/<burger_name>", methods=["get"])
 def buy(burger_name):
     print("One " + burger_name + " ordered with the following options:")
     for arg in request.args:
@@ -16,3 +16,4 @@ def buy(burger_name):
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
+    # http://kitchenview:5000/buy/gnuttburgare?noOnion&extraBacon&
