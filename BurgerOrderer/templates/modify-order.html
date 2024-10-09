@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify</title>
+    <link rel="stylesheet" href="../static/modify-order.css">
+
+</head>
+<body>
+    <h1 class="top">Modify!</h1>
+
+    <div class="modification-container">
+        <div class="order-items">
+            {% for item in cart['products'] %}
+                <div class="item">
+                <p>{{ item.name }} - {{ item.quantity }}</p>
+                <div class="add-remove-container">
+                    <form action="{{ url_for('add_to_cart', product_id=item.product_id) }}" method="POST"><button type='submit'>+</button></form>
+                    <form action="{{ url_for('remove_from_cart', product_id=item.product_id) }}" method="POST"><button type='submit'>-</button></form>
+                </div>
+                
+                <br>
+                {% if item.modifications %}
+                    <div class="modifications">
+                        <strong>Modifications:</strong>
+                        <ul>
+                            {% for topping in item.modifications %}
+                                <li class="modification-list">
+                                    {{ topping.topping_name }} - Price: ${{ topping.price_per }} - Quantity: {{ topping.quantity }}
+                                    <div class="add-remove-container">
+                                        <form action="{{ url_for('add_modification', product_id=item.product_id, topping_name=topping.topping_name) }}" method="POST">
+                                            <input type="hidden" name="topping_name" value="{{ topping.topping_name }}" >
+                                            <button type='submit'>+</button></form>
+                                            <form action="{{ url_for('remove_modification', product_id=item.product_id, topping_name=topping.topping_name) }}" method="POST">
+                                                <input type="hidden" name="topping_name" value="{{ topping.topping_name }}" >
+                                                <button type='submit'>-</button></form>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                </div>
+                <br>
+            {% endfor %}
+        </div>
+        
+        <div class="order-info-bottom">
+            <p class="cart-total">Total: ${{ cart['total_price'] }}</p>
+            <form action="{{ url_for('place_order') }}" method="POST">
+                <button type='submit'>Place Order</button>
+            </form>
+            <a href="/order">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>

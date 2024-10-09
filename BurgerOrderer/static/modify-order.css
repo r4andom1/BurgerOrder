@@ -1,0 +1,25 @@
+.item {
+    display: flex;
+    align-items: left;
+    gap: 10px;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+}
+.topping-mods {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-remove-container {
+    display: flex;
+    gap: 10px;
+}
+.add-remove-container form button {
+    width: 40px;
+}
+
+.modification-list {
+    display: flex;
+    justify-content: space-between;
+}
