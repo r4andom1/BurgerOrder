@@ -24,6 +24,12 @@
 .order-items {
     font-size: 1.5rem;
     height: 100%;
+    
+}
+
+.order-items p {
+    font-size: 1.5rem;
+    text-align: left;
 }
 
 main {
