@@ -1,47 +1,57 @@
-Ingenjörs Dagbok
+Engineer’s Diary
 
 03-09-2024
 
-Jag skapade en grupp med Kim, André och Jesper. Vi gjorde även en Discord där vi diskuterar lite vad vi ska göra och delar länkar till bra underlag för arbetet.
-
+I created a group with Kim, André, and Jesper. We also made a Discord server where we discuss what we are going to do and share links to good resources for the project.
 
 04-09-2024
 
-Vi satte oss I Erikson labb och läste igenom uppgiftgen tillsamans för att setill att alla var på samma sida samt ifall att någon hade några frögor eller förslag.
+We sat in the Ericsson lab and read through the assignment together to ensure everyone was on the same page and to check if anyone had any questions or suggestions.
 
 05-09-2024
 
-Undr labbtilfelet sate vi oss som grupp och diskuterade över vilka program vi skulle använda. Vi beslutade oss för att använda följande:
-Jetbrains, docker, Jdk, Intellij, Vscode, Python och Github 
-Efter att vi hade instalerat de miljöer vi skulle använda sate vi oss som en grupp och började lära oss om hur github fungerar och hur man använnder de olika funktionerna så som: 
-push, pull, fork, branch. För att försöka få en förståelse. Vi jobbade öven med några övningar i java.
-Efter detta gjorde vi en Github server där vi sriver våra ingenjörs dagböker.
+During the lab session, we sat down as a group and discussed which programs we would use. We decided on the following: Jetbrains, Docker, JDK, IntelliJ, VS Code, Python, and GitHub.
+After installing the environments we needed, we sat together as a group and started learning how GitHub works and how to use its various features like push, pull, fork, and branch to gain an understanding. We also 
+worked on some exercises in Java.
+Afterward, we created a GitHub repository where we write our engineering diaries.
 
 10-09-2024
 
-Skapade ett dokument där vi dokumenterar vad skom ska göras och hur vi ska göra det. 
-Det kommer vara vår manual över hur vi ska gå tillväga med uppgiften.
-Vi satte också upp våran github flow och har diskuterat hur vi ska brancha och pusha våra olika filer.
-Vi delade även upp vem som ska ta vilken varutyp. Jag tog Dricka, André tog hamburgare, Kim tog menyer och Jesper tog tillbehör.
-Jag fyllde ut min lista med olika typer av drickor samt vilken storlek det skulle ha. 
+We created a document where we document what needs to be done and how we will do it.
+This will be our manual for how to proceed with the assignment.
+We also set up our GitHub flow and discussed how to branch and push our various files.
+We divided the work regarding who will handle which product type. I took drinks, André took hamburgers, Kim took menus, and Jesper took side dishes.
+I filled out my list with different types of drinks and their sizes.
 
 12-09-2024
 
-Sins the last time I uppdatd the diory we have gone thro etchuders product tipes and added whate we think the tipickle burger placese have. We 
-still have some more changes to do and add.
-We allso desided to name are burger plase Fore Guy's. We came up whit this name becus like the populer american hamburger place Five Guy's wher 
-five guys that made a fast food chane we are four guy's that are making one. 
+Since the last time I updated the diary, we have gone through each other’s product types and added what we think a typical burger place would have. We still have some more changes to make and things to add.
+We also decided to name our burger place "Four Guy’s." We came up with this name because, like the popular American hamburger chain "Five Guy’s," which was founded by five guys, we are four guys making our own fast-
+food chain.
 
-Me and my grupp under the lab time praktist debugging in java whit in vs code. Usen what vs code prevaids and geting a depper understanding on 
-how to use de testing and debugging fetur. This will help us under are time working whit the burger meny asagnment. 
+During the lab, my group and I practiced debugging in Java within VS Code. We used the debugging tools provided by VS Code to gain a deeper understanding of testing and debugging, which will help us as we work on 
+the burger menu assignment.
 
 17-09-2024
 
-We hade a lecture today where are teacher talked abaut the assignment and it got me to reflect a little over the assignment and I got a clearer 
-view over what we needed to do and how we are going to get there. He also talked about the importance of writing good code from the beginning 
-and to not use any unecessary comments. 
+We had a lecture today where our teacher talked about the assignment. It made me reflect on the project, giving me a clearer view of what we need to do and how we are going to get there. He also emphasized the 
+importance of writing good code from the beginning and avoiding unnecessary comments.
 
-Afther the lecture we sat down in the erickson labratory and went ower are plans for the asagnemnt and we complited the menys whit what every 
-birger had in and thet the menys hade a burger, drinck, side and dip. We allso reflected ower what we are useing for the prodject and we picked 
-python for language, flask for frame wher, html and css for the webbpage (We only use css to make the webbpage more redebule for us). We picked 
-docker for database and SQL to handle the data. We also removed and fixed some text in are task documentation so we can go back in it and se what we have done and what we have to do. It will also help use when we are writing the summury of the text. 
+After the lecture, we sat down in the Ericsson laboratory and reviewed our plans for the assignment. We completed the menus, ensuring that each burger had a drink, side, and dip.
+We also reflected on the tools we are using for the project. We chose Python as the programming language, Flask as the framework, and HTML and CSS for the webpage (using CSS just to make the webpage more readable 
+for us). We picked Docker for the database and SQL to handle the data.
+We also updated and fixed some text in our task documentation so we can refer back to it to see what we have done and what still needs to be done. This will also help us when we write the summary of the text.
+
+24-09-2024
+
+Since the last diary entry, we have gotten our feature branches in GitHub to work. It took us a few hours to get it to work. The problem we found was that when we created the branches in the command interpreter, 
+they didn’t connect to GitHub correctly, so we couldn’t use them. However, by either 
+creating the branches directly in GitHub or manually setting the paths, we got it to work. Now we can push and pull and work together on the feature branches, which will make the project a lot cleaner and easier to 
+manage.
+
+Today, we created the web pages for our burger order system. We are using Flask to separate the files so the code is more organized and easier to work with. We created separate files for Python, HTML, and CSS, and 
+we have different CSS files for each HTML page.
+By sitting down today and working together on the web pages, we got a clearer picture of what we, as a group, envision for our finished program. This makes it much easier to identify the steps we need to take to 
+complete the program.
+
+Tomorrow, we have planned to get together as a group again before the lecture to discuss some more and to review everything, and make sure we aren't missing anything.

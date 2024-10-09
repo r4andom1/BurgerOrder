@@ -1,9 +1,19 @@
 """ BurgerOrderer"""
 from flask import Flask, render_template, session, request, redirect
 from db import connect
+import requests
 import db_fetch
+import os
+
 app = Flask(__name__)
 app.secret_key = "secretkeyverysecretkey"
+
+order_dict = { # Test dictionary to test sending order to kichenview
+    "name": "big_burger",
+    "quantity": 2,
+    "price": 25,
+    "modifications": []
+}
 
 @app.route("/toppings")
 def toppings():
@@ -30,7 +40,6 @@ def order_page():
 @app.route("/order/<category>", methods=['get'])
 def order_category(category):
     """ Menu choice page """
-
     items = db_fetch.fetch_category(category)
     print(f"Loading order_category with cart: {session['cart']}")
     return render_template("order-category.html", category=category, items=items, cart=session["cart"])
@@ -233,10 +242,45 @@ def initialize_session_cart():
         "total_price": 0
     }
 
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8000)
+""" Everything under here is about the kitchenview connection and sending the order through """
+base_url = 'http://' + os.getenv('KITCHENVIEW_HOST', 'localhost:5000')
+
+def render_order_page(burger_name, args):
+    return "ordered " + burger_name
+
+def make_url(burger_name):
+    """ builds url to kitchenview with burger name"""
+    return base_url + "/buy" + burger_name
+
+def add_options(url, args):
+    """
+    adds the options the user has added or removed from order to the url
+    """
+    if len(args) != 0:
+        url += "?" # adds a ? to divide the link from the args
+        for arg in args:
+            url += arg + "&" # adds a "&" between every option added-on
+        return url
     
+def send_to_kitchen(burger_name, args):
+    """ 
+    Creates url and adds the options,
+    then sends url to kitchenview.
+    """
+    requrl = make_url(burger_name)
+    requrl = add_options(requrl, args)
 
-#TODO: Lägg till fler app.routes för de andra sidorna.
-#TODO: Bygg ut front-pagen med länk till sidan för att välja meny etc
+    print("Using kitchenview url: " + requrl)
+    requests.get(requrl)
+    return
 
+@app.route("/buy/<burgername>", methods=["get"])
+def buy(burger_name):
+    """ should """
+    print("Placing an order on " + burger_name)
+    send_to_kitchen(burger_name, request.args)
+    return render_order_page(burger_name, request.args)
+
+if __name__ == "__main__":
+    #print(base_url)
+    app.run(debug=True, host="0.0.0.0", port=8000)

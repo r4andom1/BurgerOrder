@@ -40,3 +40,26 @@ Coupled with the Flask framework for python it will allow us to more easily inte
 I am going to learn more how Flask works and start tinkering with our website. I will also continue working on understanding and contributing to our datebase via
 the DrawSQL site. I will also work more with testing but towards Python since i felt it was pretty hard to understand the Java code in our last lab session. 
 I can learn more about testing if i use a programming language i am more comfortable with.
+
+1/10:
+Since my last entry we've been working on adding the finishing touches on our project structure inside Github.
+We've also made the app.py file to route to our different HTML & CSS files with flask and set it up to connect to our local network. 
+Flask is new to everyone in the project and it proved difficult to get started since we had to make a specific file structure for flask to connect the html, css and the python file
+together so it can start through the app.py file.
+
+We've also finished the MenuStore database and added it to Github and containerized it with docker. 
+I tried setting it up within Docker Desktop first but it proved difficult since i had to make several commands into the terminal which i didnt know enough about so it only
+made the image/container and connection wrong. 
+
+I finally figured it out together with the group and we set up a dockerfile inside our project in VScode,
+made a requirements.txt file and pulled a postgres image from dockerhub and then made a container with it. 
+Now everyone in the group can easily set up the database in their own container and work with it.
+
+Im going to continue working on the burgerorderer website and flesh the menus out further and start to think about how we are going to be implementing the database into our python file.
+Next time i'll have to thoroughly read through the commands and watch a longer tutorial to really grasp what commands in docker
+im using actually do. That will certainly help out and avoid some annoying debugging in the future.
+
+
+
+
+
