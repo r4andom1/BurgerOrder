@@ -4,7 +4,6 @@ from db import connect
 import requests
 import db_fetch
 import os
-import json #?
 
 app = Flask(__name__)
 app.secret_key = "secretkeyverysecretkey"
@@ -125,7 +124,9 @@ def remove_modification(product_id, topping_name):
 
 @app.route("/order/place", methods=['POST'])
 def place_order(): # check every addons quantity. If over 1, its "extra". If zero, its "no" in the url.
-    return
+    requests.get("http://localhost:5000/buy/burger")
+    referer = request.headers.get("Referer")
+    return redirect(referer)
 
 def load_topping_data_to_cart():
     conn = connect()
@@ -267,7 +268,8 @@ def send_to_kitchen(burger_name, args):
     requrl = add_options(requrl, args)
 
     print("Using kitchenview url: " + requrl)
-    requests.get(requrl) # Sends url to Kitchenview
+    # requests.get(requrl) # Sends url to Kitchenview
+    requests.get("http://localhost:5000/buy/big_burger/")
     # ex requrl: http://kitchenview:5000/buy/gnuttburgare?noOnion&extraBacon&
     return #requrl?
 
@@ -283,5 +285,6 @@ def buy(burger_name):
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=8000)
+    
     #Using kitchenview url: http://localhost:5000/buy/big_burger?topping&
     
