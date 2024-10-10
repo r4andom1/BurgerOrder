@@ -1,0 +1,5 @@
+Flask>=2.0.1
+Werkzeug>=2.1
+requests
+psycopg2
+os
