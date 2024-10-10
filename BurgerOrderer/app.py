@@ -1,10 +1,9 @@
 """ BurgerOrderer"""
-from flask import Flask, render_template, session, request, redirect
+from flask import Flask, render_template, session, request, redirect, json
 from db import connect
 import requests
 import db_fetch
 import os
-import json #?
 
 app = Flask(__name__)
 app.secret_key = "secretkeyverysecretkey"
@@ -124,8 +123,11 @@ def remove_modification(product_id, topping_name):
     return redirect(referer)
 
 @app.route("/order/place", methods=['POST'])
-def place_order():
-    return
+def place_order(): # check every addons quantity. If over 1, its "extra". If zero, its "no" in the url.
+    json_cart = json.dumps(session["cart"]) # Makes a dictionary into json-foramt
+    requests.post("http://localhost:5000/order", json=json_cart) # sends the cart in jason format to kitchenview(port 5000)
+    referer = request.headers.get("Referer")
+    return redirect(referer)
 
 def load_topping_data_to_cart():
     conn = connect()
@@ -219,7 +221,6 @@ def remove_from_session_cart(product_id):
             break
     calculate_total_price()
 
-
 def update_session_cart():
     #session["cart"] = db_fetch.fetch_cart(session.get("cart", []))
     return session["cart"]
@@ -236,7 +237,6 @@ def calculate_total_price():
                 if int(modification["quantity"] > 1):
                     total_price += float(modification["price_per"]) * (int(modification["quantity"]) - 1)
     session["cart"]["total_price"] = round(total_price, 2)
-
 
 def initialize_session_cart():
     session["cart"] = {
@@ -270,7 +270,8 @@ def send_to_kitchen(burger_name, args):
     requrl = add_options(requrl, args)
 
     print("Using kitchenview url: " + requrl)
-    requests.get(requrl) # Sends url to Kitchenview
+    # requests.get(requrl) # Sends url to Kitchenview
+    requests.get("http://localhost:5000/buy/big_burger/")
     # ex requrl: http://kitchenview:5000/buy/gnuttburgare?noOnion&extraBacon&
     return #requrl?
 
@@ -279,12 +280,13 @@ def render_order_page(burger_name, args):
 
 @app.route("/buy/<burger_name>", methods=["get"])
 def buy(burger_name):
-    """ should """
+    """  """
     print("Placing an order on " + burger_name)
     send_to_kitchen(burger_name, request.args)
     return render_order_page(burger_name, request.args)
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=8000)
+    
     #Using kitchenview url: http://localhost:5000/buy/big_burger?topping&
     
