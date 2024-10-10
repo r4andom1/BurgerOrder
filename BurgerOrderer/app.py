@@ -36,7 +36,7 @@ def order_page():
     cart = session.get("cart", [])
     print("---------------------")
     #print(f"Cart: {cart}")
-    return render_template("order-page.html", cart=cart)
+    return render_template("order-page.html", cart=session["cart"])
 
 @app.route("/order/<category>", methods=['get'])
 def order_category(category):
@@ -112,7 +112,7 @@ def remove_modification(product_id, topping_name):
         if int(product["product_id"]) == int(product_id):
             for modification in product["modifications"]:
                 if modification["topping_name"] == topping_name:
-                    if modification["quantity"] > 1:
+                    if modification["quantity"] > 0:
                         modification["quantity"] -= 1
                         print(f"Decremented quantity for topping {topping_name}. New quantity: {modification['quantity']}")
                     break
@@ -233,7 +233,8 @@ def calculate_total_price():
     for product in session["cart"]["products"]:
         for modification in product["modifications"]:
             if modification != []:
-                total_price += float(modification["price_per"]) * (int(modification["quantity"]) - 1)
+                if int(modification["quantity"] > 1):
+                    total_price += float(modification["price_per"]) * (int(modification["quantity"]) - 1)
     session["cart"]["total_price"] = round(total_price, 2)
 
 
