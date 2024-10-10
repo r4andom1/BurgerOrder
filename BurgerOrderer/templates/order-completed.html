@@ -12,9 +12,10 @@
             <h1>Four Guys</h1>
             <h3>Order Completed</h3>
             <div class="date-time-container">
-                <span class="date">12-01-2020</span>
-                <span class="time">12:14 PM</span>
+                <span class="date">{{ current_date }}</span>
+                <span class="time">{{ current_time }}</span>
             </div>
+            
             <span class="divider"></span>
             <div class="column-container">
                 <p>Qty</p>
@@ -22,40 +23,39 @@
                 <p>Price</p>
             </div>
 
-            <div class="order-item">
-                <p>1</p>
-                <p>Double Cheese Burger</p>
-                <p>200:-</p>
-            </div>
 
-            <div class="order-item">
-                <p>1</p>
-                <p>French Fries</p>
-                <p>100:-</p>
-            </div>
+            {% for item in cart['products'] %}
+                <div class="order-item">
+                    <p>{{ item.quantity }}</p>
+                    <p>{{ item.name }}</p>
+                    <p>$ {{ item.price }}</p>
+                </div>
+            {% endfor %}
             
+            <p style="font-size: 0.7rem; align-self: flex-start; padding-left: 1.5rem">Modifications are included in subtotal</p>
             <span class="divider"></span>
 
             <div class="subtotal">
                 <p>Subtotal:</p>
-                <p>300:-</p>
+                <p>$ {{ cart['total_price'] | round(2) }}</p>
             </div>
             <div class="tax">
                 <p>Tax:</p>
-                <p>30:-</p>
+                <p>$ {{ (cart['total_price'] * 0.1) | round(2) }}</p>
             </div>
             <div class="tip">
                 <p>Tip (5%):</p>
-                <p>330:-</p>
+                <p>$ {{ (cart['total_price'] * 0.05) | round(2) }}</p>
             </div>
 
             <span class="divider"></span>
             
             <div class="total">
                 <p><b>Total:</b></p>
-                <p><b>1330:-</b></p>
+                <p><b>$ {{ (cart['total_price'] * 0.05 + cart['total_price'] * 0.1 + cart['total_price']) | round(2)}} </b></p>
             </div>
     </div>
+    <a href="/cart/clear" style="position: absolute; top: 20px; left: 20px;">Back to website</a>
     
 
 
