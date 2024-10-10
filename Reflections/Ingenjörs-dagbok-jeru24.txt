@@ -106,3 +106,12 @@ With python web dev you get the benefits of python but javascript / typescript s
 opinion, the quirks with js can be painful but dont appear too often. You could do a Flask API & backend if youd like with a REACT 
 frontend but Node just keeps getting better, i would still prefer to only use flask for backend though if i had to use it. Maybe
 my opinion changes after this project but i doubt it.
+
+
+09-10
+We have made progress on the assignment, testing has been worked on and also a cart system. We made the cart system with a session variable that contains a dictionary and it worked exactly like 
+when i did similiar things with PHP. It took a while to build it out because of there being so many routes for adding products, adding toppings, removing etc. But
+now we only need to build a URL that is sent to kitchenview, we tested with a dummy url and the call gets registered by kitchen view so tomorrow we will all sit down
+and try to figure out how we want to build the link to send over all info to kitchenview. At the moment all cart logic is in app.py, it can be moved into a separate file but theres
+some struggles with that because the session variable cant be accessed so we would have to send over the cart back and forth alot, which is doable but not a priority for us right now.
+The whole cart system also got written half way through because the first time there were some oversights leading to that approach not working as we wanted.
