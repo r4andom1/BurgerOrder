@@ -1,5 +1,5 @@
 """ BurgerOrderer"""
-from flask import Flask, render_template, session, request, redirect
+from flask import Flask, render_template, session, request, redirect, json
 from db import connect
 import requests
 import db_fetch
@@ -124,7 +124,8 @@ def remove_modification(product_id, topping_name):
 
 @app.route("/order/place", methods=['POST'])
 def place_order(): # check every addons quantity. If over 1, its "extra". If zero, its "no" in the url.
-    requests.get("http://localhost:5000/buy/burger")
+    json_cart = json.dumps(session["cart"]) # Makes a dictionary into json-foramt
+    requests.post("http://localhost:5000/order", json=json_cart) # sends the cart in jason format to kitchenview(port 5000)
     referer = request.headers.get("Referer")
     return redirect(referer)
 
