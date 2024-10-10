@@ -22,10 +22,19 @@ def order():
     return "200"
 
 def print_order(shopping_cart):
-    if shopping_cart["products"][0]["quantity"] != 1: # If quantity is 1, print order normally
-        print("Print order as usual")
+    cart_addons = shopping_cart["products"][0]["modifications"]
+    if shopping_cart["products"][0]["quantity"] != 1: # If quantity is not 1
+        print("Print order as usual\n")
+        print(shopping_cart["products"][0]["quantity"])
     #else
-    return "200"
+    for item in shopping_cart["products"]:
+        print(item["name"])
+        if item["modifications"]:
+            for addon in item["modifications"]:
+                if addon["quantity"] != 1:
+                    print(addon["topping_name"])
+                    print(addon["quantity"])
+
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5001)
