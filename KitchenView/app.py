@@ -28,5 +28,5 @@ def print_order(shopping_cart):
     return "200"
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True, host="0.0.0.0", port=5001)
     # http://kitchenview:5000/buy/gnuttburgare?noOnion&extraBacon&
