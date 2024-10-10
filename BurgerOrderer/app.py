@@ -130,6 +130,7 @@ def place_order(): # check every addons quantity. If over 1, its "extra". If zer
     return redirect(referer)
 
 def load_topping_data_to_cart():
+    """This function keeps the shopping cart up-to-date"""
     conn = connect()
     cur = conn.cursor()
 
@@ -226,6 +227,7 @@ def update_session_cart():
     return session["cart"]
 
 def calculate_total_price():
+    """calculate the price of the order"""
     print(f"Calculating total price for cart: {session['cart']}")
     total_price = 0
     for product in session["cart"]["products"]:
@@ -280,7 +282,7 @@ def render_order_page(burger_name, args):
 
 @app.route("/buy/<burger_name>", methods=["get"])
 def buy(burger_name):
-    """  """
+    """Taks you to the buy page"""
     print("Placing an order on " + burger_name)
     send_to_kitchen(burger_name, request.args)
     return render_order_page(burger_name, request.args)

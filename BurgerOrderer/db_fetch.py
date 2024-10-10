@@ -2,6 +2,7 @@ from db import connect
 from collections import Counter
 
 def fetch_topping_html():
+    """This function creats the html for toppings"""
     conn = connect()
 
     if conn is None:
