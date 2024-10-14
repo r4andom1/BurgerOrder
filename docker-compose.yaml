@@ -2,11 +2,24 @@ services:
   menustore:
     build: ./MenuStore
     ports:
-      - "5433:5432"
+      - 5433:5432
 
   burgerorderer:
     build: ./BurgerOrderer
     environment:
       KITCHENVIEW_HOST: "kitchenview:5000"
     ports:
-      - "8080:8000"
+      - 8080:8000
+
+  kitchenview:
+    image: kitchenview
+    build: ./KitchenView
+    ports:
+      - 5000:5000
+  
+  test:
+    build: ./tests
+    depends_on:
+      - menustore
+      - burgerorderer
+    

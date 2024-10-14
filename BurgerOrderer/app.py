@@ -122,10 +122,13 @@ def remove_modification(product_id, topping_name):
     referer = request.headers.get("Referer")
     return redirect(referer)
 
+baseURL='http://' + os.getenv('KITCHENVIEW_HOST', 'localhost:5000')
+
 @app.route("/order/place", methods=['POST'])
 def place_order(): # check every addons quantity. If over 1, its "extra". If zero, its "no" in the url.
     json_cart = json.dumps(session["cart"]) # Makes a dictionary into json-foramt
-    requests.post("http://localhost:5001/order", json=json_cart) # sends the cart in jason format to kitchenview(port 5000)
+    requestURL = baseURL + "/order"
+    requests.post(requestURL, json=json_cart) # sends the cart in jason format to kitchenview(port 5000)
     #referer = request.headers.get("Referer")
     current_date = datetime.now().strftime("%m-%d-%Y")
     current_time = datetime.now().strftime("%I:%M %p")

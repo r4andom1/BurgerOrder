@@ -2,8 +2,8 @@ import psycopg2
 
 def connect():
     conn = psycopg2.connect(
-        host="localhost",
-        port=5433,
+        host="menustore",
+        port=5432,
         database="menustore",
         user="admin",
         password="admin"
