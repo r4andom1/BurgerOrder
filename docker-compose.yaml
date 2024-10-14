@@ -19,6 +19,8 @@ services:
   
   test:
     build: ./tests
+    environment:
+      BURGERORDERER_HOST: "burgerorderer:8000" # So we later can test burgerorderer in tests
     depends_on:
       - menustore
       - burgerorderer
