@@ -69,11 +69,16 @@ If anything, I will in the future try to implement using docker over vm because 
 
 2024-10-01
 Today I went to another lecture with the group and afterwards we sat down and worked on the project.
+
+Since my last update to the diary we as a group has 
+been working on adding the finishing touches on our structure inside github.
+We made the app.py file to route our HTML & CSS files to enable it to connect to our own local network.
+
 I've done commmits before in the project, but today I made my first code commit which felt really nice. 
-It was a commit where i implemented a route in app.py which led to an html-site which I made. 
-I also used css to make the html site a lot better. It's my first time using both html and css, so i'm happy about the outcome of it. 
-I struggled a little bit in the beginning
-but I got a tip from a friend to watch some videos on the html and css topic, so I did. 
+It was a commit where i implemented routes in app.py which led to html-sites which I made. 
+I also used css to make the html sites a lot better. It's my first time using both html and css, so i'm happy about the outcome of it. 
+I struggled a little bit in the beginning but I got a tip from a friend to watch some videos on the html and css topic, so I did. 
+
 
 ------------------------------------------------------------------------------------------------------------------
 
@@ -88,5 +93,23 @@ It's a struggle i've had through this course because alot that has been represen
 is in a language I don't know, I only just begun learning python.
 I must say though, in the beginning it was alot worse, but now when we're 
 going through some code in other languages I see the resemblance in it by knowing a bit more about python. 
+
+------------------------------------------------------------------------------------------------------------------
+
+2024-10-10
+Since the last update we have done quite alot. Me and Aron has been working on setting up the pytest for testing out the routes 
+to the server and check the connection to the database. We were following different tutorials on how to set up automatic tests 
+and we struggled for quite a bit because we tried to make it so it created a new database all the time to run the tests from. After 
+a while we decided to scrap that and switched to connect to the database directly and pulling data from it to run the tests. 
+The tests we now have succeeded to make is 5 tests where we test the first line of different 
+product types in database and see if it matches the string we gave.
+The other test that was made was a simple test to check if we could reach the homepage. 
+
+------------------------------------------------------------------------------------------------------------------
+
+2024-10-14
+Since the last update we are making the finishing touches and dockerizing burgerorderer, kitchenview, menustore and our tests. 
+We have also started on writing on reflection and summaries for the whole course. We almost finished the whole reflection, but
+we still have a few points to write down, but we have scheduled it for tomorrow/wednesday.
 
 
