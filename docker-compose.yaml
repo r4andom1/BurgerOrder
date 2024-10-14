@@ -1,24 +1,12 @@
-version: '3.8'
-
 services:
   menustore:
-    build:
-      context: ./MenuStore
-      dockerfile: Dockerfile
-    environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: menustore
+    build: ./MenuStore
     ports:
       - "5433:5432"
 
   burgerorderer:
-    build:
-      context: ./BurgerOrderer
-      dockerfile: Dockerfile
+    build: ./BurgerOrderer
     environment:
-      FLASK_APP: app.py
-    depends_on:
-      - menustore
+      KITCHENVIEW_HOST: "kitchenview:5000"
     ports:
       - "8080:8000"
