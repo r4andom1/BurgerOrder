@@ -21,14 +21,21 @@ def order():
     return "200"
 
 def print_order(shopping_cart):
+    """ 
+    Prints formatted order and any 
+    modifications if there is any. 
+    """
     cart_addons = shopping_cart["products"][0]["modifications"]
     for item in shopping_cart["products"]:
+        print("Order has been placed:")
+        print("_________________") # formatting
         print("\n" + item["name"])
         if item["modifications"]:
             print(f"Customer has modified order with: \n")
             for addon in item["modifications"]:
                 if addon["quantity"] != 1:
                     print(f"{addon['quantity']} {addon['topping_name']}")
+        print("_________________") # formatting
 
 
 if __name__ == "__main__":
