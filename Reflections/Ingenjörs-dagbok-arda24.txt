@@ -2,16 +2,20 @@ Engineer’s Diary
 
 03-09-2024
 
-I created a group with Kim, André, and Jesper. We also made a Discord server where we discuss what we are going to do and share links to good resources for the project.
+I created a group with Kim, André, and Jesper. We also made a Discord server where we discuss what we are going to do and share links to good 
+resources for the project.
 
 04-09-2024
 
-We sat in the Ericsson lab and read through the assignment together to ensure everyone was on the same page and to check if anyone had any questions or suggestions.
+We sat in the Ericsson lab and read through the assignment together to ensure everyone was on the same page and to check if anyone had any 
+questions or suggestions.
 
 05-09-2024
 
-During the lab session, we sat down as a group and discussed which programs we would use. We decided on the following: Jetbrains, Docker, JDK, IntelliJ, VS Code, Python, and GitHub.
-After installing the environments we needed, we sat together as a group and started learning how GitHub works and how to use its various features like push, pull, fork, and branch to gain an understanding. We also 
+During the lab session, we sat down as a group and discussed which programs we would use. We decided on the following: Jetbrains, Docker, JDK, 
+IntelliJ, VS Code, Python, and GitHub.
+After installing the environments we needed, we sat together as a group and started learning how GitHub works and how to use its various 
+features like push, pull, fork, and branch to gain an understanding. We also 
 worked on some exercises in Java.
 Afterward, we created a GitHub repository where we write our engineering diaries.
 
@@ -20,38 +24,67 @@ Afterward, we created a GitHub repository where we write our engineering diaries
 We created a document where we document what needs to be done and how we will do it.
 This will be our manual for how to proceed with the assignment.
 We also set up our GitHub flow and discussed how to branch and push our various files.
-We divided the work regarding who will handle which product type. I took drinks, André took hamburgers, Kim took menus, and Jesper took side dishes.
+We divided the work regarding who will handle which product type. I took drinks, André took hamburgers, Kim took menus, and Jesper took side 
+dishes.
 I filled out my list with different types of drinks and their sizes.
 
 12-09-2024
 
-Since the last time I updated the diary, we have gone through each other’s product types and added what we think a typical burger place would have. We still have some more changes to make and things to add.
-We also decided to name our burger place "Four Guy’s." We came up with this name because, like the popular American hamburger chain "Five Guy’s," which was founded by five guys, we are four guys making our own fast-
+Since the last time I updated the diary, we have gone through each other’s product types and added what we think a typical burger place would 
+have. We still have some more changes to make and things to add.
+We also decided to name our burger place "Four Guy’s." We came up with this name because, like the popular American hamburger chain "Five 
+Guy’s," which was founded by five guys, we are four guys making our own fast-
 food chain.
 
-During the lab, my group and I practiced debugging in Java within VS Code. We used the debugging tools provided by VS Code to gain a deeper understanding of testing and debugging, which will help us as we work on 
+During the lab, my group and I practiced debugging in Java within VS Code. We used the debugging tools provided by VS Code to gain a deeper 
+understanding of testing and debugging, which will help us as we work on 
 the burger menu assignment.
 
 17-09-2024
 
-We had a lecture today where our teacher talked about the assignment. It made me reflect on the project, giving me a clearer view of what we need to do and how we are going to get there. He also emphasized the 
+We had a lecture today where our teacher talked about the assignment. It made me reflect on the project, giving me a clearer view of what we 
+need to do and how we are going to get there. He also emphasized the 
 importance of writing good code from the beginning and avoiding unnecessary comments.
 
-After the lecture, we sat down in the Ericsson laboratory and reviewed our plans for the assignment. We completed the menus, ensuring that each burger had a drink, side, and dip.
-We also reflected on the tools we are using for the project. We chose Python as the programming language, Flask as the framework, and HTML and CSS for the webpage (using CSS just to make the webpage more readable 
+After the lecture, we sat down in the Ericsson laboratory and reviewed our plans for the assignment. We completed the menus, ensuring that each 
+burger had a drink, side, and dip.
+We also reflected on the tools we are using for the project. We chose Python as the programming language, Flask as the framework, and HTML and 
+CSS for the webpage (using CSS just to make the webpage more readable 
 for us). We picked Docker for the database and SQL to handle the data.
-We also updated and fixed some text in our task documentation so we can refer back to it to see what we have done and what still needs to be done. This will also help us when we write the summary of the text.
+We also updated and fixed some text in our task documentation so we can refer back to it to see what we have done and what still needs to be 
+done. This will also help us when we write the summary of the text.
 
 24-09-2024
 
-Since the last diary entry, we have gotten our feature branches in GitHub to work. It took us a few hours to get it to work. The problem we found was that when we created the branches in the command interpreter, 
+Since the last diary entry, we have gotten our feature branches in GitHub to work. It took us a few hours to get it to work. The problem we 
+found was that when we created the branches in the command interpreter, 
 they didn’t connect to GitHub correctly, so we couldn’t use them. However, by either 
-creating the branches directly in GitHub or manually setting the paths, we got it to work. Now we can push and pull and work together on the feature branches, which will make the project a lot cleaner and easier to 
+creating the branches directly in GitHub or manually setting the paths, we got it to work. Now we can push and pull and work together on the 
+feature branches, which will make the project a lot cleaner and easier to 
 manage.
 
-Today, we created the web pages for our burger order system. We are using Flask to separate the files so the code is more organized and easier to work with. We created separate files for Python, HTML, and CSS, and 
+Today, we created the web pages for our burger order system. We are using Flask to separate the files so the code is more organized and easier 
+to work with. We created separate files for Python, HTML, and CSS, and 
 we have different CSS files for each HTML page.
-By sitting down today and working together on the web pages, we got a clearer picture of what we, as a group, envision for our finished program. This makes it much easier to identify the steps we need to take to 
+By sitting down today and working together on the web pages, we got a clearer picture of what we, as a group, envision for our finished 
+program. This makes it much easier to identify the steps we need to take to 
 complete the program.
 
-Tomorrow, we have planned to get together as a group again before the lecture to discuss some more and to review everything, and make sure we aren't missing anything.
+Tomorrow, we have planned to get together as a group again before the lecture to discuss some more and to review everything, and make sure we 
+aren't missing anything.
+
+10-10-2024
+
+Since the last diary entry, we have done quite a lot. We have been working on the project from 10 to 17 every day for the last 4 days.
+André and I took on the tests, and we started by trying to use pytest and test the routes to the server, and by that way, test the database and the 
+connection to the server. But by doing it that way, it had a lot of connection problems with the server and the routing. Pytest also had a hard time copying 
+our PSQL database and creating a new one to run the tests from, so instead, we switched to just connecting to the database directly and pulling data from it 
+to run the tests. Now, we have a test program that runs the first line of the different product types and checks if it matches the string we provided. We 
+also made a test program that checks the connection to the database by printing "connection 200" if it's good.
+
+We are also done with the shopping cart, so we can now order, edit orders, remove, and add items by pressing a + or - button.
+
+Today, we got our kitchen view to work by creating a URL in the app.py 'BurgerOrderer' and sending it to 'kitchenview.' By using JSON, we can take that 
+information and use it to see what the customer ordered. I also dockerised the burgerorder aplecation so we can run it from a docker container
+
+So the program itself is complete. the only thing we need to do now is to docker-compose the program and write a summary.

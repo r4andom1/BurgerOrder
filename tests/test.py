@@ -1,22 +1,20 @@
 import psycopg2
 
 def connect():
-    try:
-        conn = psycopg2.connect(
-            host="localhost",
-            port=5433,
-            database="menustore",
-            user="admin",
-            password="admin"
-        )
-    except Exception as e:
-        print(f"Error connecting to database")
+    conn = psycopg2.connect(
+        host="menustore",
+        port=5432,
+        database="menustore",
+        user="admin",
+        password="admin"
+    )
     conn.set_client_encoding('UTF8')
     return conn
 
 # _____________________________________________________
 
 def database_test_products():
+    print("Testing products table")
     conn = connect()
     if conn is not None:
         try:
@@ -35,6 +33,7 @@ def database_test_products():
 # _____________________________________________________
 
 def database_test_menus():
+    print("Testing menus table")
     conn = connect()
     if conn is not None:
         try:
@@ -53,6 +52,7 @@ def database_test_menus():
 # _____________________________________________________
 
 def database_test_toppings():
+    print("Testing toppings table")
     conn = connect()
     if conn is not None:
         try:
@@ -71,6 +71,7 @@ def database_test_toppings():
 # _____________________________________________________
 
 def database_test_topping_type():
+    print("Testing topping type table")
     conn = connect()
     if conn is not None:
         try:
@@ -89,6 +90,7 @@ def database_test_topping_type():
 # _____________________________________________________
 
 def database_test_product_type():
+    print("Testing product type table")
     conn = connect()
     if conn is not None:
         try:

@@ -115,3 +115,14 @@ now we only need to build a URL that is sent to kitchenview, we tested with a du
 and try to figure out how we want to build the link to send over all info to kitchenview. At the moment all cart logic is in app.py, it can be moved into a separate file but theres
 some struggles with that because the session variable cant be accessed so we would have to send over the cart back and forth alot, which is doable but not a priority for us right now.
 The whole cart system also got written half way through because the first time there were some oversights leading to that approach not working as we wanted.
+
+
+10-10
+Today we have accomplished alot, the post request to kitchenview with the finished order now works and gets handled and printed
+by kitchenview, theres now a receipt that prints on burgerorderer website when you place your order, i made it so it fetches
+data from the session cart and added an option so u can go back to start a new order, that in turns clears your cart of course. 
+We now have most elements working but we need to dockerize it which is the next step, we ran into a problem where burgerorderer 
+cant connect to db but we realized its because we are using localhost and those are individual for the containers, to beat this
+issue we need to set up a docker network and we will start doing that by building up our docker compose, it feels like we 
+are on track to finish the project by the deadline, now we only need to dockerize everything together, clean up code, add docstrings
+and write the summary :)

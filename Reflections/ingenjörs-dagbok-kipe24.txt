@@ -59,6 +59,17 @@ Im going to continue working on the burgerorderer website and flesh the menus ou
 Next time i'll have to thoroughly read through the commands and watch a longer tutorial to really grasp what commands in docker
 im using actually do. That will certainly help out and avoid some annoying debugging in the future.
 
+10/10:
+Since the last update our group has worked on finishing up the burgerorder connection to kitchenview, setting up tests and set up our project to generate documentation. 
+I've tried to set up the connection from burgerorder to kitchenview which did not work well at first. I couldn't get our items from the shopping-cart to be sent over to kitchenview
+because i did lacked understanding of how the Flask library worked. I started researching Flask and eventually worked out how to send over the connection with a place-order function using
+a POST request. I then imported JSON and turned the shopping cart from its dictionary format to JSON format and then sent it through to kitchenview. 
+
+I then went through some trial and error to allow me to continue using the cart inside the kitchenview app.py. I asked for help from a teammember and we found the json.loads() method
+which allowed us to decode the cart and use it to extract items from the dictionary and print them out to the console in a nice format.
+We are very close to being done. Now we only need to polish the kitchenview app.py and burgerorder app.py, dockerize BurgerOrder and Kitchenview and then set up the whole project with
+docker compose. When we're done with that we only need to write a summerization & reflection and then we can turn in the project.
+
 
 
 
