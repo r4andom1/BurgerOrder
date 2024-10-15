@@ -142,7 +142,9 @@ def clear_cart():
     return redirect("/order")
 
 def load_topping_data_to_cart():
+
     """ Load topping data to cart """
+
 
     conn = connect()
     cur = conn.cursor()
@@ -239,6 +241,7 @@ def calculate_total_price():
     """ Calculate total price for cart """
 
     #print(f"Calculating total price for cart: {session['cart']}")
+
     total_price = 0
     for product in session["cart"]["products"]:
         total_price += float(product["price"]) * int(product["quantity"])
