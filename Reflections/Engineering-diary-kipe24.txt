@@ -71,6 +71,11 @@ We are very close to being done. Now we only need to polish the kitchenview app.
 docker compose. When we're done with that we only need to write a summerization & reflection and then we can turn in the project.
 
 DEBUG SESSION 15/10:
+1. Debugging functionality of the front_page() function (Inside the debug-branch) which has the task of rendering the HTML to the frontpage and initializing the order cart for user.
+2. I put one breakpoint in row 19.
+When i press "Step Into", the function calls the function initialize_session_cart() is called which creates a dictionary containing key-value pairs to allow the user 
+to add items to their cart when ordering. Then the front_page() function prints out "Session cart initialized" to the console to let me know that the cart is up and running
+and waiting for the user to add items to their cart. It then renders the HTML template for "home.html" to build up the structure and style for the homepage. 
 
 1. Välj någon funktionalitet, till exempel beställ en “Dripping With Lard
 Heartstopper”-meny
