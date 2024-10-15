@@ -7,6 +7,28 @@
 - [@anrn24](https://github.com/anrn24)
 - [@Maugust04](https://github.com/Maugust04)
 
+
+## Run Project
+
+To run the project, make sure you have docker installed. Run the following commands in your terminal:
+
+__Build & start containers:__ 
+```docker
+  docker-compose up --build
+```
+
+__Delete containers:__ 
+```docker
+  docker-compose down
+```
+
+__Run tests:__ 
+```docker
+  docker-compose run test
+```
+
+
+
 ## About
 BurgerOrder is a system that allows users to order different items and modify their order through different webpages. 
 
@@ -19,12 +41,7 @@ We primarily used Python and the Flask framework to allow connection to differen
 For the database we used PostgreSQL and connected it to our server using Psycopg2. To allow easy collaboration for everyone in the project we used Git & Github and split up the different systems into their own branches as to not interfere with other files while adding new features.
 We also put in automatic tests for checking that the correct values can be extracted when running the program.
 
-## Run Project
-To run the project, make sure you have docker installed.
-Run the following commands in your terminal:
 
-__Start project:__ docker-compose up --build
+## License
 
-__Delete docker containers:__ docker-compose down
-
-__Run tests:__ docker-compose run test
+[MIT](https://choosealicense.com/licenses/mit/)
