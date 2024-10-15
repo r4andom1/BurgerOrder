@@ -1,2 +1,2 @@
-# BurgerOrder
-A school exercise where we create a system to for a client to order hamburgers.
+# Debug branch
+Database needs to run in docker container according to instructions.txt in menustore, app.py can then run locally.
