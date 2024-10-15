@@ -15,7 +15,7 @@ def front_page():
 
     initialize_session_cart()
     print("Session cart initialized")
-    print(session["cart"])
+    #print(session["cart"])
     return render_template("home.html")
 
 @app.route("/order")
@@ -29,7 +29,7 @@ def order_category(category):
     """ Menu choice page """
 
     items = db_fetch.fetch_category(category)
-    print(f"Loading order_category with cart: {session['cart']}")
+    #print(f"Loading order_category with cart: {session['cart']}")
     return render_template("order-category.html", category=category, items=items, cart=session["cart"])
 
 @app.route("/order-completed")
@@ -72,9 +72,9 @@ def remove_from_cart(product_id):
 def modify_order():
     """ Modify order page """
 
-    print(f"Loading order modify with cart: {session['cart']}")
+    #print(f"Loading order modify with cart: {session['cart']}")
     load_topping_data_to_cart()
-    print(f"Order modify loaded with cart: {session['cart']}")
+    #print(f"Order modify loaded with cart: {session['cart']}")
     return render_template("modify-order.html", cart=session['cart'])
 
 @app.route("/cart/add-modification/<product_id>&<topping_name>", methods=['POST'])
@@ -82,18 +82,18 @@ def add_modification(product_id, topping_name):
     """ Add modification to product """
     
     session["cart"] = session.get("cart")
-    print(f"Adding modification {topping_name} to product_id {product_id}")
+    #print(f"Adding modification {topping_name} to product_id {product_id}")
 
     for product in session["cart"]["products"]:
         if int(product["product_id"]) == int(product_id):
             for modification in product["modifications"]:
                 if modification["topping_name"] == topping_name:
                     modification["quantity"] += 1
-                    print(f"Incremented quantity for topping {topping_name}. New quantity: {modification['quantity']}")
+                    #print(f"Incremented quantity for topping {topping_name}. New quantity: {modification['quantity']}")
                     break
 
     calculate_total_price()
-    print(f"Added modification new cart: {session['cart']}")
+    #print(f"Added modification new cart: {session['cart']}")
     
     referer = request.headers.get("Referer")
     return redirect(referer)
@@ -103,7 +103,7 @@ def remove_modification(product_id, topping_name):
     """ Remove modification from product """
 
     session["cart"] = session.get("cart")
-    print(f"Removing modification {topping_name} from product_id {product_id}")
+    #print(f"Removing modification {topping_name} from product_id {product_id}")
 
     for product in session["cart"]["products"]:
         if int(product["product_id"]) == int(product_id):
@@ -116,7 +116,7 @@ def remove_modification(product_id, topping_name):
 
     calculate_total_price()
 
-    print(f"Removed modification new cart: {session['cart']}")
+    #print(f"Removed modification new cart: {session['cart']}")
     
     referer = request.headers.get("Referer")
     return redirect(referer)
@@ -150,7 +150,7 @@ def load_topping_data_to_cart():
     product_ids = [item['product_id'] for item in session["cart"]["products"]]
 
     if not product_ids:
-        print("No products in cart to load toppings.")
+        #print("No products in cart to load toppings.")
         return
 
     cur.execute(""" 
@@ -189,10 +189,10 @@ def add_to_session_cart(product_id):
     cur.execute("SELECT product_id, name, price, product_type FROM products WHERE product_id = %s", (product_id,))
     product = cur.fetchone()
     
-    print(f"Product: {product}")
+    #print(f"Product: {product}")
 
     if product is None:
-        print("Product not found.")
+        #print("Product not found.")
         return
 
     session["cart"] = session.get("cart", {"products": []})
@@ -216,29 +216,29 @@ def add_to_session_cart(product_id):
         })
 
     calculate_total_price()
-    print(f"Cart: {session['cart']}")
+    #print(f"Cart: {session['cart']}")
 
 def remove_from_session_cart(product_id):
     """ Remove product from cart """
 
     session["cart"] = session.get("cart", {"products": []})
-    print(f"Removing product_id {product_id} from cart.")
+    #print(f"Removing product_id {product_id} from cart.")
 
     for product in session["cart"]["products"]:
         if int(product["product_id"]) == int(product_id):
             if product["quantity"] > 1:
                 product["quantity"] -= 1
-                print(f"Decremented quantity for product_id {product_id}. New quantity: {product['quantity']}")
+                #print(f"Decremented quantity for product_id {product_id}. New quantity: {product['quantity']}")
             else:
                 session["cart"]["products"].remove(product)
-                print(f"Removed product_id {product_id} from cart.")
+                #print(f"Removed product_id {product_id} from cart.")
             break
     calculate_total_price()
 
 def calculate_total_price():
     """ Calculate total price for cart """
 
-    print(f"Calculating total price for cart: {session['cart']}")
+    #print(f"Calculating total price for cart: {session['cart']}")
     total_price = 0
     for product in session["cart"]["products"]:
         total_price += float(product["price"]) * int(product["quantity"])
