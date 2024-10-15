@@ -1,12 +1,10 @@
 FROM python:3.9-slim
 
-ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Install psycopg2 dependencies
+# Install system dependencies needed for psycopg2
 RUN apt-get update \
-    && apt-get -y install libpq-dev gcc \
-    && pip install psycopg2
+    && apt-get -y install libpq-dev gcc
 
 WORKDIR /app
 
