@@ -4,8 +4,8 @@ def connect():
     """ Connect to the database """
 
     conn = psycopg2.connect(
-        host="menustore",
-        port=5432,
+        host="localhost",
+        port=5433,
         database="menustore",
         user="admin",
         password="admin"
