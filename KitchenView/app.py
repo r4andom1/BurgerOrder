@@ -26,9 +26,9 @@ def print_order(shopping_cart):
     modifications if there is any. 
     """
     cart_addons = shopping_cart["products"][0]["modifications"]
+    print("Order has been placed:")
     for item in shopping_cart["products"]:
-        print("Order has been placed:")
-        print("_________________") # formatting
+        print("-----------------") # formatting
         print("\n" + item["name"])
         if item["modifications"]:
             print(f"Customer has modified order with: \n")
