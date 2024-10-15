@@ -70,6 +70,29 @@ which allowed us to decode the cart and use it to extract items from the diction
 We are very close to being done. Now we only need to polish the kitchenview app.py and burgerorder app.py, dockerize BurgerOrder and Kitchenview and then set up the whole project with
 docker compose. When we're done with that we only need to write a summerization & reflection and then we can turn in the project.
 
+DEBUG SESSION 15/10:
+
+1. Välj någon funktionalitet, till exempel beställ en “Dripping With Lard
+Heartstopper”-meny
+2. Vilka breakpoints sätter du för att starta debug-sessionen? Var hittar du
+filen du skall sätta dem i?
+3. Hur fortsätter du? Hur använder du knapparna “Continue”, “Step over”,
+“Step into”, och “Step out”?
+4. Bevaka någon variabel.
+• Hur gör du det?
+• Vad har den för värde?
+• Kan du få reda på när värdet på variabeln ändras? Hur?
+5. Prova lite olika “vägar” genom funktionaliteten, till exempel beställ något
+annat, avbryt halvägs igenom, osv.
+• Hur påverkar detta vilken kod som körs?
+• Hur påverkat detta dina bevakade variabler?
+Varje steg skall dokumenteras. Upprepa varje steg tillräckligt många gånger
+så att du känner dig säker på hur det fungerar.
+Avsluta med att sammanfatta och reflektera, till exempel om:
+• Vad gick bra? Vad gick mindre bra?
+• Vad var lätt? Vad var svårt?
+• Kan debugging bli ett användbart verktyg för dig? Varför? Varför inte?
+
 
 
 
