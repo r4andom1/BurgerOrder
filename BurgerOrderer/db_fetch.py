@@ -2,7 +2,8 @@ from db import connect
 from collections import Counter
 
 def fetch_topping_html():
-    """This function creats the html for toppings"""
+    """ Fetches all toppings from the database and returns them as HTML """
+
     conn = connect()
 
     if conn is None:
@@ -29,6 +30,8 @@ def fetch_topping_html():
 
 
 def fetch_category(category):
+    """ Fetches all items from a category """
+
     category_map = {
         "beef": 1,
         "chicken": 1,
@@ -86,6 +89,8 @@ def fetch_category(category):
         conn.close()
 
 def fetch_product(product_id):
+    """ Fetches product details """
+
     conn = connect()
 
     if conn is None:
