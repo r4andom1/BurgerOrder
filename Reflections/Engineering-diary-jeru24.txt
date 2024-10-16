@@ -125,14 +125,24 @@ We now have most elements working but we need to dockerize it which is the next 
 cant connect to db but we realized its because we are using localhost and those are individual for the containers, to beat this
 issue we need to set up a docker network and we will start doing that by building up our docker compose, it feels like we 
 are on track to finish the project by the deadline, now we only need to dockerize everything together, clean up code, add 
-docstrings
-and write the summary :)
+docstrings and write the summary :)
 
 15-10
 We are now on the final stretch, since the last diary commit we have written alot on the summarization, we have made a working 
 compose and added doc-strings + cleaned up code. The last thing we are focusing on is to write the READMEs and then we will all 
-sit 
-down to just go through the entire project and reflect on it. But everything finally works in docker!
+sit down to just go through the entire project and reflect on it. But everything finally works in docker! The tests run by
+launching its own container which also separates the tests from the project files which is good. Currently we test the database
+tables with some normal hardcoded expections and using assert to make sure we get what we expect. When the project launches
+the test container launches which runs all the tests and then say how many tests passed and when running it goes like 
+
+TESTING XXX
+PASSED
+
+TESTING YYY
+FAILED
+
+We made sure to make the test container dependant on menustore because if the db isnt running the tests will never pass
+and the test container is completely reusable so if you launch it again it runs the tests and then exits.
 
 16-10
 ---------------------------DEBUG SESSION------------------------------------
