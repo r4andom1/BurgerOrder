@@ -89,10 +89,13 @@ The debugging session as a whole went well and the program did what i expected i
 Vscode offers solid debugging features and it was easy to step through each row of code and if i wanted to dig deeper inside a function i could step into it, watch a variable and see how it changed and easily step out of the
 function when i got the necessary data i needed to see that the program was running as expected. Debugging a website that is up and running forces you to debug a bit differently than if you would only run the program through your console,
 as you sometimes have to press different buttons inside the website to route to different websites which allows you to continue debugging in vscode as the code and the website are connected together.
+Debugging through a website likes this was completely new for me and was very helpful for me, as i didn't even know you could debug through a live website in this way before. 
+I identified several usecases in the future when building out my next website to test connections and see what happens step-by-step when debugging in this way and i can't wait to try them out in my next project.
 
-The debugging tool is crucial for me to really understand what my code does step by step. If i have a problem with the code and it doesn't do what i expected it to do, i start up the debugger and go over the rows that are causing trouble,
+The debugging tool is crucial for me to really understand what my code does step by step. If i have a problem with the code and it doesn't do what i expected it to do, 
+i start up the debugger and go over the rows that are causing trouble,
 row by row. Sometimes adding print statements to fully display variables so i can see what is going on and if i am missing any steps.
 Vscode offers so many features that makes it easy to watch variables and see how they change throughout the program,
 how the flow of the program changes depending on what logic you put in etc.
-I will continue to use it and always encourage my fellow colleagues to put time to really learn their debugging tool as it can speed up the development process
-a lot when you use it correctly.
+I will continue to use the debugger and will always encourage my fellow colleagues to put time to really learn their debugging tool as it can speed up the development process
+a lot when you use it correctly. 
