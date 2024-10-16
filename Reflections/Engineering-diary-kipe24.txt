@@ -70,35 +70,29 @@ which allowed us to decode the cart and use it to extract items from the diction
 We are very close to being done. Now we only need to polish the kitchenview app.py and burgerorder app.py, dockerize BurgerOrder and Kitchenview and then set up the whole project with
 docker compose. When we're done with that we only need to write a summerization & reflection and then we can turn in the project.
 
-DEBUG SESSION 15/10:
-1. Debugging functionality of the front_page() function (Inside the debug-branch) which has the task of rendering the HTML to the frontpage and initializing the order cart for user.
-2. I put one breakpoint in row 19.
-When i press "Step Into", the function calls the function initialize_session_cart() is called which creates a dictionary containing key-value pairs to allow the user 
-to add items to their cart when ordering. Then the front_page() function prints out "Session cart initialized" to the console to let me know that the cart is up and running
-and waiting for the user to add items to their cart. It then renders the HTML template for "home.html" to build up the structure and style for the homepage. 
+DEBUG SESSION 16/10:
+Today i am debugging the functionality of the KitchenView function print_order() which has the responsibility of using the order-cart that is sent from BurgerOrderer and prints it out as a formatted string.
 
-1. Välj någon funktionalitet, till exempel beställ en “Dripping With Lard
-Heartstopper”-meny
-2. Vilka breakpoints sätter du för att starta debug-sessionen? Var hittar du
-filen du skall sätta dem i?
-3. Hur fortsätter du? Hur använder du knapparna “Continue”, “Step over”,
-“Step into”, och “Step out”?
-4. Bevaka någon variabel.
-• Hur gör du det?
-• Vad har den för värde?
-• Kan du få reda på när värdet på variabeln ändras? Hur?
-5. Prova lite olika “vägar” genom funktionaliteten, till exempel beställ något
-annat, avbryt halvägs igenom, osv.
-• Hur påverkar detta vilken kod som körs?
-• Hur påverkat detta dina bevakade variabler?
-Varje steg skall dokumenteras. Upprepa varje steg tillräckligt många gånger
-så att du känner dig säker på hur det fungerar.
-Avsluta med att sammanfatta och reflektera, till exempel om:
-• Vad gick bra? Vad gick mindre bra?
-• Vad var lätt? Vad var svårt?
-• Kan debugging bli ett användbart verktyg för dig? Varför? Varför inte?
+I put one breakpoint on row 24 inside of print_order(). I then press the "step over" and go through two print statements that prints "Order has been placed" and some formatting text to the console.
+When i come to the for loop which prints the name and all the modifications of the order i press "step into" so i can see every step in the loop. It prints out the name of the order first and then when i continue to
+step over the rows of code, it checks if any modifications have been done and prints them out one at a time. 
 
+I choose to add the "addon" variable to my watch-list in the debugger and i can see how the variable changes between each iteration of the loop to a different item in the order-cart each time. 
+The "addon" variable is a dictionary with key-value pairs consisting of price, quantity and the name of the topping/addon. It starts out as Sourdough bread, with the price of 1.75$ and the quantity of 1 as
+that is what i chose in the menu on the order & modify website. Every time the for-loop iterates it goes through the dictionary of items and modifications and changes each time. When i have read
+the information that i need from that particular function and that i see that it does what it is supposed to do, i can press "step out" to get out of the function or loop and continue to another row or function of the program.
 
+If i change the menu-item to something else, the order-cart will have different items in it and the variable "addon" will iterate through another dictionary, resulting in the variable changing to completely new items each time. 
+If i cancel half-way through the debugging session ends and the contents of the order is displayed instantly instead of printing them out one by one as they would have if i stepped through them. 
 
+The debugging session as a whole went well and the program did what i expected it to do.
+Vscode offers solid debugging features and it was easy to step through each row of code and if i wanted to dig deeper inside a function i could step into it, watch a variable and see how it changed and easily step out of the
+function when i got the necessary data i needed to see that the program was running as expected. Debugging a website that is up and running forces you to debug a bit differently than if you would only run the program through your console,
+as you sometimes have to press different buttons inside the website to route to different websites which allows you to continue debugging in vscode as the code and the website are connected together.
 
-
+The debugging tool is crucial for me to really understand what my code does step by step. If i have a problem with the code and it doesn't do what i expected it to do, i start up the debugger and go over the rows that are causing trouble,
+row by row. Sometimes adding print statements to fully display variables so i can see what is going on and if i am missing any steps.
+Vscode offers so many features that makes it easy to watch variables and see how they change throughout the program,
+how the flow of the program changes depending on what logic you put in etc.
+I will continue to use it and always encourage my fellow colleagues to put time to really learn their debugging tool as it can speed up the development process
+a lot when you use it correctly.
