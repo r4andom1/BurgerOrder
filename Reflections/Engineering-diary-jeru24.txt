@@ -124,10 +124,92 @@ data from the session cart and added an option so u can go back to start a new o
 We now have most elements working but we need to dockerize it which is the next step, we ran into a problem where burgerorderer 
 cant connect to db but we realized its because we are using localhost and those are individual for the containers, to beat this
 issue we need to set up a docker network and we will start doing that by building up our docker compose, it feels like we 
-are on track to finish the project by the deadline, now we only need to dockerize everything together, clean up code, add docstrings
+are on track to finish the project by the deadline, now we only need to dockerize everything together, clean up code, add 
+docstrings
 and write the summary :)
 
 15-10
 We are now on the final stretch, since the last diary commit we have written alot on the summarization, we have made a working 
-compose and added doc-strings + cleaned up code. The last thing we are focusing on is to write the READMEs and then we will all sit 
+compose and added doc-strings + cleaned up code. The last thing we are focusing on is to write the READMEs and then we will all 
+sit 
 down to just go through the entire project and reflect on it. But everything finally works in docker!
+
+16-10
+---------------------------DEBUG SESSION------------------------------------
+
+The functionality im going to test is to order a customized hamburger!
+
+To start off im starting kitchenview in the terminal, then i put a breakpoint in burgerorderers app.py on the "/" route, more 
+specifically right when the initialize_session_cart() function gets called as im also going to monitor the cart variable 
+throughout this process. I was pleasantly suprised how well the debugger worked with flask, its just like normal. I start the 
+app.py in burgerorderer with the debugger attached and then try to enter the site in the browser. First nothing loads which is 
+not a suprise as we have a breakpoint before rendering html and sending it back. However i step into the 
+initialize_session_cart() function to see how it works. All it does is put session["cart"] = {"products": [], "total_price": 0} 
+all the values we need for now! I press continue to release the program from my breakpoint. On the website i navigate into "menu"
+and then "beef" now before adding to cart i put a breakpoint at the /cart/add/<product_id> on the 
+add_to_session_cart(product_id) function. When i now try to add a burger it doesnt show in my cart because we have stopped at 
+the function, lets step into it and look what happens! First we connect to the database using some functions, i step into the 
+first one which takes me into another file, i know i dont want to be here so i step out again and choose to step over these db 
+functions as i dont care for them. I could also have put a breakpoint further down and used continue! I then get to a line that 
+fetches the cart and then we loop to check if the product we tried to add is in the cart because then we just want to increase 
+quantity, as its the first item we append all the information gathered. The session cart now went from the state earlier to 
+{'products': [{'product_id': 59, 'name': 'Big Juicy Burger', 'price': Decimal('7.99'), 'product_type': 1, 'quantity': 1, 
+'modifications': []}], 'total_price': 0} the modifications are set as empty when appending, this makes sense because we add the 
+modifications before placing order, however the total_price is still 0, this is because right after stepping over the appending 
+we fall into the calculate_total_price() function, i step into it and se that we loop through the cart calculate based on price 
+of product. I step out of the function as i dont want to go through all the logic after ive seen it. Now the item is fully added 
+to the cart and the route just redirects us back so it looks like the page never changed on the browser, cart now has 
+total_price: 7.99! I set another breakpoint at /order/modify and press continue, after pressing the button on the website we 
+stop again before the page is loaded, here a function is called to load all the topping data into our cart, i step into it and 
+see that it fetches from the db and loops through and adds modifications to the cart so i step out and step over. Now the 
+template loads. Lets check the cart variable, it looks like before but in the modifications array we now have:
+{'price_per': '1.30', 'quantity': 1, 'topping_name': 'Potato bread'}, {'price_per': '3.50', 'quantity': 1, 'topping_name': 
+'Beef'}, {'price_per': '0.75', 'quantity': 1, 'topping_name': 'Salad'}, {'price_per': '0.30', 'quantity': 1, 'topping_name': 
+'Ketchup'}
+
+all relevant toppings!
+so i try to set potato bread to 0 and beef to 2 i can see that after updating toppings the quantities in the cart has been 
+updated to 0 and 2 respectively. It also calls the calculate total price function again and loops over the toppings aswell and 
+adds their individual prices but only if the quantity is above 1 which is per design, it doesnt take off money if u remove 
+toppings but it adds money if you add toppings, capitalism... So we now have an updated total which is 11.49. And before i send 
+it over to kitchenview i put a breakpoint at the post request and my cart that im sending over looks like the following:
+
+{'products': [{'modifications': [{'price_per': '1.30', 'quantity': 0, 'topping_name': 'Potato bread'}, {'price_per': '3.50', 
+'quantity': 2, 'topping_name': 'Beef'}, {'price_per': '0.75', 'quantity': 1, 'topping_name': 'Salad'}, {'price_per': '0.30', 
+'quantity': 1, 'topping_name': 'Ketchup'}], 'name': 'Big Juicy Burger', 'price': '7.99', 'product_id': 59, 'product_type': 1, 
+'quantity': 1}], 'total_price': 11.49}
+
+nice now it turns it into json and sends it over, in kitchenview we then get the following print after stepping over and 
+allowing the request to send
+
+-----------------
+
+Big Juicy Burger
+Customer has modified order with: 
+
+0 Potato bread
+2 Beef
+_________________
+
+I tried going right to cart add route in the browser to see if i can add products that way, but because its a post request its 
+not allowed and i would have to fake that request with some sort of plugin or make it with a tool like Postman. I tried to go 
+back from modifying and adding another product and modifying the original one again and going in and out but the cart stayed 
+intact and didnt break in any way, nothing got duplicated etc. This proves the functions handling the cart are pretty well 
+built. And to just add how i monitored the variable it was in the RUN AND DEBUG tab on VScode under Variables under Global 
+variables and then under Session variables where the cart resides. When ordering something that isnt a burger i can see that the 
+modifications array just remains empty. 
+
+The debug session went well, everything worked better than expected, kudos to flask. The only hard or more annoying thing is 
+that if you arent in an active breakpoint or stepping through ie not letting the program run by itself you cant see the 
+variables, annoying but doesnt really matter as i just could put a breakpoints where i want, might be a setting in VSCode but if 
+thats the case it should be showcased better, could also be that the debugger detaches but im not sure. It was easy to put 
+breakpoints and then just release them and continue as i could 
+put breakpoints at routes therefore choosing in the browser when i want to go to that route and in turn that breakpoint, when 
+monitoring the cart i notice that the one we send over in the end actually is unnessecarily bloated for a simple reason. In 
+kitchenview we only print and care fore the toppings that arent the default amount so in this case we only care for the bread 
+and beef, the other toppings could be removed from the cart we send over to avoid sending over unnessecary data. Its not however 
+as easy as to check if quantity is 1 and remove that toppings because some products has 2 pattys as default, then we might need 
+to have another field like default_quantity which we can reference to before sending over and clean up the cart.
+
+I think debugging can and is a very useful tool for me as we just saw i found an optimization i never really thought of before 
+stepping through the process step by step!
