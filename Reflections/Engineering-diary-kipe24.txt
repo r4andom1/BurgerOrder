@@ -99,3 +99,15 @@ Vscode offers so many features that makes it easy to watch variables and see how
 how the flow of the program changes depending on what logic you put in etc.
 I will continue to use the debugger and will always encourage my fellow colleagues to put time to really learn their debugging tool as it can speed up the development process
 a lot when you use it correctly. 
+
+17/10:
+Since my last entry i have finished my debugging session, wrote a lot of documentation for the summerization & reflection portion of our project and done some more testing.
+While debugging i learned a lot about debugging a live session of a website and how that changes your approach when debugging which was very useful. It's something
+im definitely going to use in my future projects. 
+
+We've also set up the project to start with only one command using docker-compose. I am amazed by how easy it to start up the whole project now, including the database. 
+We also set up automated tests that runs when starting up the system and checks that the database is displaying the correct values. It was pretty easy and smooth to set up using docker and while we only tested a few
+pretty simple things, i am looking forward to flesh out my tests in my future projects and really utilize them to make the development of my projects quicker and more stable.
+
+Tomorrow the whole group is going to get together and talk through the entire project, going through every part and letting each team member talk about what they've worked on and if they have any experiences to share so the team
+can learn together. Then when we have fully gone through every part and checked that we've satisfied all the requirements we are going to turn in the assignement together.
