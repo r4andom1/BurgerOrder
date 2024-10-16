@@ -127,4 +127,67 @@ Since the last update we are making the finishing touches and dockerizing burger
 We have also started on writing on reflection and summaries for the whole course. We almost finished the whole reflection, but
 we still have a few points to write down, but we have scheduled it for tomorrow/wednesday.
 
+------------------------------------------------------------------------------------------------------------------
 
+2024-10-15--16
+
+Since the last update we cleaned and finished up the summary and reflections. 
+We have also merged the feature branches to the development branch and have also been cleaning up the code and making docstrings for the code to easily see what does what. 
+
+We also made a new branch called “debug” in order to make the debug session easier to conduct and do it locally for each and everyone. 
+
+DEBUG SESSION
+
+As I write this I am conducting my own debug session and I chose two simple things, checking the events happening while trying to connect to the home page and monitoring the variable “conn”. 
+The debug session is being conducted on the debug branch. 
+
+Start of the debug session: I start off with putting my breakpoints in the file app.py under the directory BurgerOrderer that starts the connection to the app. 
+The breakpoints will be on line 16 and 186 in app.py. 
+
+I run app.py and put the localhost address in the browser. When doing so, the debugger jumps down to the first breakpoint which is in the function “front_page()”. 
+As the function hasn’t gone through I haven't reached the first site yet, so it is just loading right now. 
+The breakpoint is put on the function within the function called “initialize_session_cart()”. 
+I use the button “step into” to go into the function and it takes me in app.py to the function. 
+The function is here to do exactly what it says, initialize the cart for the session. I use “step out” to jump out of the function and return to continue the other function.
+
+Next step I just step into the print that prints out that the cart has been initialized in the terminal.
+Next I step into the return render_template("home.html") which is a flask function. It starts with looking for a template folder and a home.html file inside it. 
+Inside the html file it starts with going through metadata on line 5 to give information to a browser. 
+Line 5 gives information how the webpage displays on different screen sizes. These instructions are from what I know always put in the head in a html file (haven’t worked a lot with html). 
+
+Next I step into the body and the code in the body represents the visual representation of the home page. At line 10 we see the heading text that greets the user to our webpage. 
+At line 11 there is a href that tells the program that if the user clicks on the button (which is on line 12) it will try to go to that URL. 
+
+When it has gone through the whole head and body in the html file it returns the information to the function and the site starts up in my browser.
+
+Next I tried to monitor the variable “conn” in the function “add_to_session_cart“. I use breakpoint and also use the watch function in vscode to check what happens to the variable and if the variable changes. 
+The variable is dedicated to start the connection to the database. Stepping into the function you go to the file db.py. 
+The file imports psycopg2 which is a PostgreSQL “adapter” that allows python code to establish a connection to the PostgreSQL database. 
+On line 6 in db.py (conn = psycopg2.connect()) is the line that creates the connection and the rest of the code in the connection is parameters that gives directions on how this connection will be deducted. 
+For example, host = “localhost” is a parameter that says that the server will run on our local computer and database = “menustore” tells the function the name of the database. 
+
+The variable “conn” didn’t really change anything while running the debug session since its only use is to establish the connection to the database, so I went on to monitor another variable named total_price in the function calculate_total_price(). 
+The function is meant to sum the total price in the cart. I start with adding the “Big juicy burger” to the cart. The variable “conn” starts the connection to the database.
+
+afterwards it goes into the function add_to_session_cart. In this function I chose to see what happens to the variable product. 
+The sql query before product variable has been given is using select statement to retrieve a specific column with information from the products table inside db. 
+“where product_id = %s” is saying to only return the specific product_id information which was given before this. 
+After this it goes into product = cur.fetchone() which says to return the first thing with the product_id and set it to the variable product. 
+The variable product changes depending on what the product_id is set to while fetching the information from the database.
+
+The variable total_price will take the product value from the key price from the dictionary it provides and add it with the cart's total price which will be set to 0 if nothing has been added yet. 
+
+Use of debugging buttons: In the debug session I mostly used the “step into” and “step out” buttons, and sometimes the “continue” button when I wanted to skip a whole function. 
+The “step over” button I didn’t use that much, didn’t really find it useful in this session.
+
+Summary and reflection: The debug session went quite well for being the first time I used the debugger in vscode. 
+Because I’m a beginner to the whole software world I took the route to take simple things to debug and focus on understanding the full process. 
+I thought doing the monitoring on the variable conn was easy and easily understandable because it wasn’t that many lines of code to break down. 
+
+One thing I’ve struggled with is to understand how the fetching process works from the database. 
+After this session I'm a bit richer with knowledge around functions that work with PostgreSQL, but I still need to do more sessions to learn the commands to feel more comfortable working with databases in the future. 
+
+Will debugging be a useful tool for me? Absolutely, and I would even say it might be a necessity.
+For example, one simple reason is that it will be useful to troubleshoot while writing the code to check where the code fails or just check that the code does what it is supposed to do. 
+
+------------------------------------------------------------------------------------------------------------------
