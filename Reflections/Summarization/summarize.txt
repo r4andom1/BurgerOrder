@@ -140,7 +140,7 @@ docker-compose run test
 
 
 
-7. Link to documentation the diaries and debug session ducomentation for each memeber in the group.
+7. Link to documentation diaries and debug session ducomentation for each member in the group.
 
 André:
 https://github.com/r4andom1/BurgerOrder/blob/development/Reflections/Ingenj%C3%B6rs-dagbok-anrn24.txt
