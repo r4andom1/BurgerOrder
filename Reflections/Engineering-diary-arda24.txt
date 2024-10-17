@@ -88,3 +88,43 @@ Today, we got our kitchen view to work by creating a URL in the app.py 'BurgerOr
 information and use it to see what the customer ordered. I also dockerised the burgerorder aplecation so we can run it from a docker container
 
 So the program itself is complete. the only thing we need to do now is to docker-compose the program and write a summary.
+
+16 - 10 - 2024
+
+Debug Session Documentation: Ordering a “Big Juicy Burger”
+During this debugging session, I focused on the process of ordering a "Big Juicy Burger" in the application. My main objective was to verify that the cart functionality was operating correctly, particularly how 
+products were added to the cart, how the cart was displayed on the order page, and how the session was managed.
+
+To begin, I set breakpoints in several locations within the code to ensure I could effectively monitor the application. The first breakpoint was placed in the “initialize_session_cart()” function. 
+This function is responsible for initializing the session cart when accessing the front page. I wanted to confirm that the cart was being initialized correctly before any products were added, ensuring that it 
+started as an empty cart. Next, I placed a breakpoint in the “/order route” to inspect how the cart data was passed from the server to the template. This was important to check that the cart was being rendered 
+accurately on the order page. I also added a breakpoint in the “add_to_session_cart(product_id)” function, which handles adding products to the cart. By looking at this section, I could ensure that when a product 
+was ordered, it was added to the cart with the correct details like the items price and quantity.
+
+In order to step through the code effectively, I used VS Code's debugging tools. The Continue function allowed me to run the code until the next breakpoint, while Step Over enabled me to skip over function calls 
+when I wanted to observe the high-level flow without diving into the internal logic. I used Step Into to enter functions like “add_to_session_cart()”, where I wanted to closely examine how the cart was 
+updated. Step Out helped me exit functions once I had looked at the necessary information and returned to the higher-levels of the code.
+During the debugging session, I monitored the “session["cart"]” variable to observe how the cart was modified after adding or removing items. Initially, the cart was empty: “{"products": [], "total_price": 0}”. As 
+I added items to the cart I could see the contents of the cart change. With products and modifications reflected in the session. I paid special attention to how “session["cart"]["products"]” was 
+updated, confirming that the correct items were added or removed based on customers actions.
+
+To test different scenarios, I placed an order for a different menu item, the “Avocado Dream Burger.” By doing so, I was able to compare how the cart changed with each new product. I confirmed that the correct 
+product details appeared in the cart, and that the right code paths were executed. Additionally, I tested clearing the cart midway through an order to see how the application handled this reset. The session cart 
+was successfully cleared, returning to its initial empty state without any issues.
+
+The debugging was good and it helped me see that overall cart management and total price calculation were functioning as expected. One of the more challenging aspects of this debugging session was navigating 
+session variables across different routes. Since changes to the session data could affect other parts of the application, I had to be careful about the flow of data and how it was managed between the routes.
+In conclusion, the debugging session went well. It allowed me to ensure that the functionality of the program was working as expected. Debugging is a good tool to have. It can help you catch small mistakes you have 
+made in your program but it can also help you ensure that its working as intended 
+
+17 - 10 - 2024
+
+Since the last diary entry, we have completed the summary for our project. All the containers have been set up, and the connections between them are fully established. With everything functioning as expected, we are now ready to submit the 
+project.
+
+This project has taught me a lot from the very beginning. I’ve gained valuable experience with several key technologies, including Docker, Flask, debugging, and Git. Each step brought its own set of challenges and learning opportunities, making 
+the project both educational and enjoyable. From setting up containers to troubleshooting code, I’ve developed an understanding of these tools and how they work together. Overall, it’s been a rewarding project with many steps and 
+tasks, and I feel more confident in my abilities because of it.
+
+The new skills I’ve learned over the past few months will be incredibly useful in future projects and tasks, both in school and in my future career. This experience has equipped me with the knowledge and confidence to handle similar challenges 
+going forward.
