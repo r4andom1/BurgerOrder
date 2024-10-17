@@ -1,0 +1,156 @@
+Assignment description: https://bth.instructure.com/courses/5864/files/1150437?wrap=1
+
+
+Assignment 1: Collaboration and Configuration Management
+--------------------------------------------------------
+
+1. Team members: André Rosenquist, Aron Dalfalk, Jesper Rudegran, Kim Petersson
+2. Link to the projects homepage:  https://github.com/r4andom1/BurgerOrder
+
+3. Summary: Configuration management is a process that is used to manage and control changes in a project in software development, and is a way to keep the project well-documented. 
+Configuration management is beneficial because it facilitates teamwork by making it easy to track what has been done and what still needs to be done. It also makes it easier to work on the same project simultaneously without risking interference with others' work. 
+It helps prevent conflicts and maintains version control as it allows you to work in separate branches from the active program. 
+Additionally, configuration management is useful as it provides a simple and efficient way to save work, allowing collaboration from multiple computers at the same time and it can help retrieve work from your computer if you accidentally managed to delete it or it got removed in other methods.
+
+4. Common workflow with Git: The workflow began with cloning the project to our local computer with the command “git clone project url link”. 
+With this command it copies the whole project from a remote server to your local computer. This is done to prevent changes being made directly to the main project and will only be changed when you’re pushing the changes later to the project. 
+
+We used several unique branches to isolate a feature and work on it until it was complete and ready to be merged back to a development branch when ready. 
+Then when the development branch was tested and fully refined, we merged it to the main branch to ensure we always have a stable branch that worked as intended.
+
+When we’re ready to commit we first used git pull to update our local project first to see if any changes to the project had been done. Afterwards we used the command “git add .” to make all changes we’ve made locally ready to be saved in git. 
+After that we used the command “git commit -m” to commit the changes with a text  “-m”  that would explain what has been changed or added in the commit to the project and easy for everyone else to see what has been worked on. 
+After that we push the changes to the remote repository with the command “git push”. Before being able to push you might need to fix a merge conflict, this is pretty intuitively done with today's IDEs and their well formed UIs. 
+There you pick which version to keep or make a new one. You only need to solve a merge conflict if the merge can't be done automatically, which often is if the same line has been edited.
+
+
+5. Our experience of working with Git: We spent quite some time in the beginning of the project documenting how our workflow would be set up to allow everyone in the team to understand how and why we were going to move forward with creating new branches and what those branches would contain.
+That’s why our version control system worked very well for us in general. We had a concrete plan from the start on how we were going to divide our project in several different branches to isolate the different working parts of the project. 
+This allowed us to not interfere with each others work in the team. It did take some time to get going in the start as everyone in the group had very limited experience in working in a team in Github. 
+But once we had worked on the project for a short time and gone through some trial and error with creating, deleting and merging branches we got the hang of it.
+
+We had some merging errors along the way since we were several people working on one file simultaneously at times, but we managed to solve them by going through the merging differences methodically and correcting them by following a logical approach. 
+
+We also managed to delete a whole branch when we were merging branches in the beginning of the project, but thanks to Githubs ability to store previous iterations of the project we could easily revert back to the older version and get the branch back. 
+
+In part of how we structured and documented our project, we accomplished everything we set out to do with the version control system. If we had any problems or lacked some knowledge about something with for example Git, the team solved it by talking through it until everyone understood it.
+
+An improvement opportunity is that we could’ve researched more ways to work with Git and look into different Git workflows, we chose Git Flow but in hindsight it was a pretty blind pick just because it's “proven” and a known good way. 
+With that said there are so many different workflows and if we researched some other ones there could’ve been one that fit the type of our project better.
+
+
+
+
+
+
+Assignment 2: Implementation and Documentation
+----------------------------------------------
+
+1. Team members: André Rosenquist, Aron Dalfalk, Jesper Rudegran, Kim Petersson
+2. Link to the projects homepage:  https://github.com/r4andom1/BurgerOrder
+
+3. Summary of what we’ve implemented: 
+We have implemented a relation-database with PostgreSQL that connects to our BurgerOrderer API written in Flask. 
+The BurgerOrderer API renders a HTML template based on a given route. A cart system is implemented with a dictionary session variable to allow multiple users. 
+When an order is placed the BurgerOrderer API in turn sends a POST request to our KitchenView API that writes out the information about a given order. 
+The KitchenView API is not connected to the DB and will only write out the order and modifications eg 2 tomatoes or 0 tomatoes, default values wont be displayed. 
+Each module is containerized with Docker and a Docker compose is made to run all containers in one go. Testing of the database has been implemented and runs automatically or manually with a command. 
+Each container has its own responsibilities in the project and so does each module, this is to break up responsibilities and know what is done where.
+
+4. Our experience of conducting the project: 
+Our implementation of the project worked very well in general because of the time we put into documenting and deciding on how we're going to create the projects different systems and what tools we needed to implement them. 
+We tried to limit the scope of the project and take a pragmatic approach on how to make a well finished product.  But because of just how many new tools and techniques we had to learn and implement in such a short amount of time we ran into many problems along the way. 
+
+Our database went very well because of time spent on refining the design on how all the tables would connect to each other to allow us to extract data easily and in a logical sense.
+
+Working with Flask in Python was new to all of us and that did not make it easy for us to create the routes and make the connections work well in the start. 
+It became apparent very quickly that you have to work in a very specific way to make Flask work optimally. But once we put more time into understanding the syntax and libraries it allowed us to spin up new routes and flesh out the websites much faster. 
+
+Everytime we ran into a challenge with a part of the project, we sat down and discussed how we could get unstuck. Sometimes a short explanation would work, other times we sent each other tutorials or articles to go through and try to learn more about how to solve the problem. 
+Something that worked well that we could have used more extensively was to do more research about different topics to make the development smoother. We learned that if you have good fundamental knowledge about the subject, it’s easier to know what steps to take and in what order.
+
+If we could have started to project over, we would probably spend even more time researching and discussing what tools we need and simplify the project even more. 
+But we did make a conscious decision to use these tools because we want to get better at them for future projects, even if we did know that it would be more difficult.
+Because of time restrictions, we did not fully implement the ability for the user to order a whole menu and modify that menu in the checkout section. 
+We did add the ability to get the menu information from the database but in the end we decided that it was best to focus on the main requirements from the assignment and only let the user add different burgers and customize their order in that way instead. 
+It would take some time to add the code needed to account for the menus and we wanted to spend that time in refining other parts of the project.
+
+5. Our experience of working with containers: Using containers and specifically docker was new for most of us. But the experience using containers has been good. During our project we used docker. 
+A big plus to mention is that Docker’s own tutorials are really good and efficient in how they go through a specific topic and walk through the whole process very easily. Docker containers are a nice way of keeping your computer from having a lot of excess that all of the programs create to be able to run.
+
+We ran into some issues when our database and BurgerOrderer app both ran in different containers because they in turn have respective localhosts and the way we connected to the DB no longer worked. 
+The solution to this was to set up a docker network which wasn’t the most intuitive thing, but after some testing we managed to get it working. 
+
+When we started working on a Docker-compose everything became much easier as we could now launch three different containers with one command and link them all together in the compose file, this made it so we in the end have 3 main commands. 
+One to build the containers, one to remove the containers and one to run tests. Before you would run more commands just to get one image made into a container.
+
+
+Commands
+--------
+
+Build & start containers:
+docker-compose up --build
+
+Delete containers:
+docker-compose down
+
+
+
+
+
+
+Assignment 3: Testing and Debugging
+-----------------------------------
+
+1. Team members: André Rosenquist, Aron Dalfalk, Jesper Rudegran, Kim Petersson
+2. Link to the projects homepage:  https://github.com/r4andom1/BurgerOrder
+
+3. Short summary on the tests: The functionality we decided to test was the database and if we were able to fetch information from it. 
+Five automatic tests were made in order to fetch different information from the database. We also made 2 tests to specifically test if it could reach the homepage, so seven tests in total. 
+
+4. Short summary on how the tests were conducted: The tests were conducted by creating a series of test cases to validate that the program was working as intended. 
+We used a little unittesting to check the html and the app connection. We tested the database separately by just calling on it and seeing if the output was the same as we expected it to be. 
+So after five seconds of starting up the app and the server the test will run a check on the database and see if the different products are in the right positions and then print it out in the terminal. 
+
+5. Prints from the latest test-session: The print from our latest test session was made before we dockerized our project. 
+The print we get from the automatic test that checks if we reach the first page in the app is that it first shows the products in cart, which in this case is zero because we don’t test that functionality right now. 
+The other thing it shows is the total price which again is zero because it’s not the thing we’re testing. At the end of the print we got “OK” and that it ran 1 test.
+
+
+Our tests for testing the database make sure that the first line of every product type in the database is in the correct spot. 
+So by connecting to the database the code runs a check to see if the output from the database is the same as it was intended to be. If the output is not as intended it will give an error message and return with an error of what it printed out and what it was expected to get back. 
+As of these tests all the tests went through with no failures. 
+If a test were to fail you would check the database to ensure everything is in the right place by checking with the database backup that is located in the directory “MenuStore” named “menustore_restore.backup” and see if any of the products had moved or been deleted.
+
+6. Our experience of working with automatic tests: Our experiences from making automatic tests were both ups and downs. 
+We started off with watching some tutorials and thereafter started a try session of building our own automatic tests. At first we tried to do the testing with a large testing library. That would create its own database for the tests it would run and after the test were completed it would delete it. 
+But instead of helping us it just added complexity and made everything much harder than it had to be. In the end we opted to just write to logic ourselves which removed dependencies and made everything clearer in terms of how it works.
+
+
+Command
+-------
+
+Run tests:
+docker-compose run test
+
+
+
+
+
+
+
+
+7. Link to documentation the diaries and debug session ducomentation for each memeber in the group.
+
+André:
+https://github.com/r4andom1/BurgerOrder/blob/development/Reflections/Ingenj%C3%B6rs-dagbok-anrn24.txt
+
+Aron:
+https://github.com/r4andom1/BurgerOrder/blob/development/Reflections/Ingenj%C3%B6rs-dagbok-arda24.txt 
+
+Jesper:
+https://github.com/r4andom1/BurgerOrder/blob/development/Reflections/Ingenj%C3%B6rs-dagbok-jeru24.txt 
+
+Kim:
+https://github.com/r4andom1/BurgerOrder/blob/development/Reflections/ingenj%C3%B6rs-dagbok-kipe24.txt 
+
